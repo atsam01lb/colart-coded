@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colart Digital Marketing Agency — Launching Soon</title>
+  <meta name="description" content="Colart Digital Marketing Agency is launching soon. Bold creativity, smart strategy, and marketing that helps your brand shine." />
+  <meta name="theme-color" content="#1b3a5b" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Reset & base ---------- */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --navy: #1b3a5b;
+      --navy-deep: #112a44;
+      --ink: #1a1a1a;
+      --muted: #4a5a6a;
+      --paper: #f7f8fb;
+      --paper-2: #eef1f7;
+      --accent: #d63384;
+      --max-w: 1320px;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ---------- Layout shell ---------- */
+    .page {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    /* Faded background image */
+    .page::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url('assets/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.18;
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    /* Soft white wash to lift the foreground */
+    .page::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(247, 248, 251, 0.85) 60%,
+        rgba(247, 248, 251, 0.95) 100%
+      );
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ---------- Header ---------- */
+    .top {
+      width: 100%;
+      padding: 28px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand img {
+      height: 64px;
+      width: auto;
+      animation: fadeInDown 0.9s ease-out both;
+    }
+
+    .badge {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 10px 30px -8px rgba(17, 42, 68, 0.35);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInDown 0.9s ease-out 0.1s both;
+      display: block;
+    }
+
+    .badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge:hover {
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 18px 40px -10px rgba(17, 42, 68, 0.5);
+    }
+
+    /* ---------- Main hero ---------- */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 24px 24px 60px;
+      position: relative;
+    }
+
+    .rocket-wrap {
+      position: relative;
+      width: min(46vw, 420px);
+      aspect-ratio: 1 / 1;
+      margin: 0 auto 28px;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
+
+    .rocket-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 25px 40px rgba(17, 42, 68, 0.25));
+      animation: float 5s ease-in-out infinite;
+    }
+
+    /* Subtle pulse glow behind the rocket */
+    .rocket-wrap::before {
+      content: '';
+      position: absolute;
+      inset: 8% 8%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27, 58, 91, 0.18), transparent 70%);
+      filter: blur(20px);
+      z-index: -1;
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .headline {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      color: var(--navy);
+      font-size: clamp(2.4rem, 8vw, 6rem);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 18px;
+      animation: fadeInUp 1s ease-out 0.4s both;
+    }
+
+    .headline .word {
+      display: inline-block;
+    }
+
+    /* Animated decorative underline */
+    .headline-underline {
+      width: clamp(60px, 12vw, 110px);
+      height: 4px;
+      background: linear-gradient(90deg, transparent, var(--navy), transparent);
+      margin: 0 auto 24px;
+      border-radius: 2px;
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .subhead {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      font-size: clamp(1.05rem, 2.4vw, 1.6rem);
+      letter-spacing: 0.02em;
+      margin-bottom: 38px;
+      animation: fadeInUp 1s ease-out 0.55s both;
+    }
+
+    .meta {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      animation: fadeInUp 1s ease-out 0.7s both;
+    }
+
+    .domain {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .credit {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: var(--navy);
+      font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    .credit::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0;
+      height: 2px;
+      background: var(--navy);
+      transition: width 0.4s ease;
+    }
+
+    .credit:hover {
+      color: var(--navy-deep);
+    }
+
+    .credit:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- Animations ---------- */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50%      { opacity: 0.85; transform: scale(1.06); }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 768px) {
+      .top {
+        padding: 18px 22px;
+      }
+      .brand img {
+        height: 44px;
+      }
+      .badge {
+        width: 60px;
+        height: 60px;
+      }
+      .hero {
+        padding: 12px 20px 40px;
+      }
+      .rocket-wrap {
+        width: min(58vw, 260px);
+        margin-bottom: 22px;
+      }
+      .headline {
+        letter-spacing: 0.03em;
+        font-size: clamp(1.9rem, 9vw, 3rem);
+      }
+      .subhead {
+        margin-bottom: 28px;
+      }
+      .meta {
+        gap: 8px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .top {
+        padding: 14px 16px;
+      }
+      .brand img {
+        height: 38px;
+      }
+      .badge {
+        width: 52px;
+        height: 52px;
+      }
+      .domain,
+      .credit {
+        letter-spacing: 0.12em;
+        font-size: 0.72rem;
+      }
+      .headline {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <a href="/" class="brand" aria-label="Colart Digital Marketing Agency home">
+        <img src="assets/logo-colart.png" alt="Colart Digital Marketing Agency" />
+      </a>
+      <a
+        href="https://www.theahmadcodes.com"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="badge"
+        aria-label="Visit The Ahmad Codes"
+      >
+        <img src="assets/theahmadcodes-logo.png" alt="The Ahmad Codes" />
+      </a>
+    </header>
+
+    <main class="hero">
+      <div class="rocket-wrap" aria-hidden="true">
+        <img src="assets/rocket.png" alt="" />
+      </div>
+
+      <h1 class="headline">LAUNCHING SOON</h1>
+      <div class="headline-underline" aria-hidden="true"></div>
+      <p class="subhead">The page is under construction</p>
+
+      <div class="meta">
+        <span class="domain">www.colartdigitalmarketingagency.com</span>
+        <a
+          class="credit"
+          href="https://www.theahmadcodes.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Developed by The Ahmad Codes</a>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
