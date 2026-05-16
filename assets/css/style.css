@@ -2558,3 +2558,90 @@ footer {
 .modal-logo-cell.dark-logo {
   background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ec 100%);
 }
+
+/* ===========================================
+   SECTION 3 — SOCIAL MEDIA (preview grid + modal masonry)
+   Preview = 5 uniform squares for clean section view.
+   Modal = masonry layout (CSS columns) — every image keeps its
+   natural aspect ratio (squares, portraits, story 9:16, landscape).
+=========================================== */
+
+/* ===== PREVIEW GRID — 5 cards, masonry (respects natural aspect ratios) ===== */
+.social-preview-grid {
+  column-count: 5;
+  column-gap: 16px;
+  margin-bottom: 40px;
+}
+@media (max-width: 1024px) { .social-preview-grid { column-count: 3; column-gap: 14px; } }
+@media (max-width: 600px)  { .social-preview-grid { column-count: 2; column-gap: 12px; } }
+
+.social-preview-card {
+  display: block;
+  width: 100%;
+  margin: 0 0 16px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f5f5f7;
+  border: 1px solid var(--line);
+  box-shadow: 0 4px 20px rgba(26, 20, 36, .04);
+  cursor: pointer;
+  transition: transform .5s cubic-bezier(.7, 0, .2, 1), box-shadow .5s, border-color .5s;
+}
+@media (max-width: 1024px) { .social-preview-card { margin-bottom: 14px; } }
+@media (max-width: 600px)  { .social-preview-card { margin-bottom: 12px; } }
+
+.social-preview-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(100, 40, 120, .15);
+  border-color: rgba(100, 40, 120, .25);
+}
+.social-preview-card img {
+  display: block;
+  width: 100%;
+  height: auto;        /* Natural aspect ratio preserved */
+  transition: transform .6s cubic-bezier(.7, 0, .2, 1);
+}
+.social-preview-card:hover img { transform: scale(1.06); }
+
+/* ===== MODAL — MASONRY (Pinterest-style, natural aspect ratios) =====
+   Uses CSS columns: images flow top-to-bottom in each column.
+   Each image displays at its full natural aspect ratio — no cropping. */
+.work-modal-social-grid {
+  column-count: 4;
+  column-gap: 14px;
+}
+@media (max-width: 1100px) { .work-modal-social-grid { column-count: 3; column-gap: 12px; } }
+@media (max-width: 700px)  { .work-modal-social-grid { column-count: 2; column-gap: 10px; } }
+@media (max-width: 420px)  { .work-modal-social-grid { column-count: 2; column-gap: 8px; } }
+
+.modal-social-cell {
+  display: block;
+  width: 100%;
+  margin: 0 0 14px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #f5f5f7;
+  cursor: pointer;
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+@media (max-width: 1100px) { .modal-social-cell { margin-bottom: 12px; } }
+@media (max-width: 700px)  { .modal-social-cell { margin-bottom: 10px; } }
+@media (max-width: 420px)  { .modal-social-cell { margin-bottom: 8px; } }
+
+.modal-social-cell:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(100, 40, 120, .15);
+}
+.modal-social-cell img {
+  display: block;
+  width: 100%;
+  height: auto;        /* CRITICAL: lets each image keep its natural aspect ratio */
+  transition: transform .5s cubic-bezier(.7, 0, .2, 1);
+}
+.modal-social-cell:hover img { transform: scale(1.04); }
