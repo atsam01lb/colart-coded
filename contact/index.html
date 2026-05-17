@@ -1,174 +1,121 @@
-<form
-  id="contactForm"
-  class="contact-form fade-in"
-  action="https://formsubmit.co/elhindysamuel@gmail.com"
-  method="POST"
->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- FormSubmit Settings -->
-  <input
-    type="hidden"
-    name="_subject"
-    value="New Contact Form Submission - Colart Website"
-  />
+  <title>Contact Colart | Digital Marketing Agency in Lebanon</title>
 
-  <input
-    type="hidden"
-    name="_captcha"
-    value="false"
-  />
+  <link rel="stylesheet" href="/assets/css/style.css">
 
-  <input
-    type="hidden"
-    name="_template"
-    value="table"
-  />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-  <input
-    type="hidden"
-    name="_next"
-    value="https://www.colartdigitalmarketingagency.com/contact/"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-  <div class="contact-form-grid">
+<body>
 
-    <div class="form-group">
-      <label for="fullName">Full Name</label>
-      <input
-        type="text"
-        id="fullName"
-        name="Full Name"
-        required
-        autocomplete="name"
-      />
-    </div>
+<header>
+  <a href="/" class="logo">
+    <img src="/assets/images/colart-logo.png" alt="Colart logo">
+  </a>
 
-    <div class="form-group">
-      <label for="emailAddress">Email Address</label>
-      <input
-        type="email"
-        id="emailAddress"
-        name="Email Address"
-        required
-        autocomplete="email"
-      />
-    </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/services/">Services</a>
+    <a href="/our-work/">Our Work</a>
+    <a href="/contact/" class="active">Contact</a>
+  </nav>
+</header>
 
-    <div class="form-group">
-      <label for="phoneNumber">Phone Number</label>
-      <input
-        type="tel"
-        id="phoneNumber"
-        name="Phone Number"
-        required
-        autocomplete="tel"
-      />
-    </div>
+<!-- HERO -->
+<section>
+  <h1>Contact Colart</h1>
+  <p>Let’s talk about your project</p>
+</section>
 
-    <div class="form-group">
-      <label for="serviceNeeded">Service Needed</label>
+<!-- FORM -->
+<section>
 
-      <select
-        id="serviceNeeded"
-        name="Service Needed"
-        required
-      >
-        <option value="" selected disabled>
-          Select a service
-        </option>
+  <form id="contactForm"
+        action="https://formsubmit.co/elhindysamuel@gmail.com"
+        method="POST">
 
-        <option value="Brand Identity">
-          Brand Identity
-        </option>
+    <!-- FormSubmit config -->
+    <input type="hidden" name="_subject" value="New Inquiry - Colart Website">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next" value="https://www.colartdigitalmarketingagency.com/contact/">
 
-        <option value="Social Media Management">
-          Social Media Management
-        </option>
+    <label>Full Name</label>
+    <input type="text" id="fullName" name="Full Name" required>
 
-        <option value="Digital Marketing">
-          Digital Marketing
-        </option>
+    <label>Email</label>
+    <input type="email" id="emailAddress" name="Email" required>
 
-        <option value="Media Production">
-          Media Production
-        </option>
+    <label>Phone</label>
+    <input type="tel" id="phoneNumber" name="Phone" required>
 
-        <option value="Web Design / UI UX">
-          Web Design / UI UX
-        </option>
+    <label>Service</label>
+    <select id="serviceNeeded" name="Service" required>
+      <option disabled selected>Select service</option>
+      <option>Branding</option>
+      <option>Social Media</option>
+      <option>Marketing</option>
+      <option>Web Design</option>
+      <option>Production</option>
+    </select>
 
-        <option value="Development">
-          Development
-        </option>
+    <label>Message</label>
+    <textarea id="projectDetails" name="Message" required></textarea>
 
-        <option value="Other">
-          Other
-        </option>
-      </select>
-    </div>
-
-    <div class="form-group form-group-full">
-      <label for="projectDetails">
-        Project Details
-      </label>
-
-      <textarea
-        id="projectDetails"
-        name="Project Details"
-        rows="6"
-        placeholder="Tell us about your business, what you need, timelines, or anything helpful."
-        required
-      ></textarea>
-    </div>
-
-  </div>
-
-  <div class="contact-terms-row">
-
-    <label class="terms-check">
-
-      <input
-        type="checkbox"
-        id="acceptTerms"
-        name="Accepted Terms"
-        value="Yes"
-        required
-      />
-
-      <span class="terms-check-box">
-        <i class="fa-solid fa-check"></i>
-      </span>
-
-      <span class="terms-check-text">
-        I have read and accept the
-
-        <button
-          type="button"
-          class="terms-link-button"
-          data-terms-open
-        >
-          Terms of Service
-        </button>.
-      </span>
-
+    <label>
+      <input type="checkbox" required>
+      I accept Terms
     </label>
 
-  </div>
+    <button type="submit">Send Inquiry</button>
 
-  <div class="contact-submit-row">
+  </form>
 
-    <button
-      type="submit"
-      class="btn-pill-gradient"
-    >
-      <span>Send Inquiry</span>
-      <i class="fa-solid fa-paper-plane"></i>
-    </button>
+</section>
 
-    <p class="contact-submit-note">
-      Submitting will send your inquiry by email and open WhatsApp with the same message.
-    </p>
+<footer>
+  <p>© 2026 Colart</p>
+</footer>
 
-  </div>
+<script>
+const form = document.getElementById("contactForm");
 
-</form>
+form.addEventListener("submit", function () {
+
+  const name = document.getElementById("fullName").value;
+  const email = document.getElementById("emailAddress").value;
+  const phone = document.getElementById("phoneNumber").value;
+  const service = document.getElementById("serviceNeeded").value;
+  const message = document.getElementById("projectDetails").value;
+
+  const text =
+`New Inquiry from Colart Website
+
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Service: ${service}
+
+Message:
+${message}`;
+
+  const url = "https://wa.me/96170649423?text=" + encodeURIComponent(text);
+
+  setTimeout(() => {
+    window.open(url, "_blank");
+  }, 800);
+
+});
+</script>
+
+</body>
+</html>
