@@ -2650,20 +2650,51 @@ footer {
    SECTIONS 4 & 5 — CAROUSELS & MENUS
 =========================================== */
 
-/* Cover image on brand cards — for portrait-format cover slides
-   (carousels 4:5, menus 9:16) we use object-position: top to preserve
-   the brand logo and main visual at the top of each cover. */
-.brand-card[data-brand="del-arts"] .brand-card-img img,
-.brand-card[data-brand="taha-perfumes"] .brand-card-img img,
-.brand-card[data-brand="tune-karaoke"] .brand-card-img img,
-.brand-card[data-brand="ctrl-z-brokerage"] .brand-card-img img {
-  object-position: center 30%;
+/* Override the default 1:1 brand-card aspect ratio so the preview tiles
+   match the natural shape of their cover images — no cropping needed. */
+
+/* Section 4 — Carousels: 4:5 portrait (Instagram post format) */
+#carousels .brand-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) { #carousels .brand-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { #carousels .brand-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { #carousels .brand-grid { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; } }
+
+#carousels .brand-card { aspect-ratio: 4 / 5; }
+#carousels .brand-card-img img { object-position: center center; }
+
+/* Section 5 — Menus: 9:16 story format. Cards naturally taller. */
+#menus .brand-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+@media (max-width: 1100px) { #menus .brand-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 768px)  { #menus .brand-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px)  { #menus .brand-grid { grid-template-columns: 1fr; max-width: 300px; margin: 0 auto; } }
+
+#menus .brand-card { aspect-ratio: 9 / 16; }
+#menus .brand-card-img img { object-position: center center; }
+
+/* Slightly tighter overlay on portrait cards so it doesn't dominate the cover */
+#carousels .brand-card-overlay,
+#menus .brand-card-overlay {
+  padding: 20px 18px 18px;
+  background: linear-gradient(to top, rgba(26, 20, 36, .9) 0%, rgba(26, 20, 36, .65) 50%, transparent 100%);
+}
+#carousels .brand-card-overlay h3,
+#menus .brand-card-overlay h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+#carousels .brand-card-cta,
+#menus .brand-card-cta {
+  font-size: 11.5px;
 }
 
-.brand-card[data-brand="nakha-khasa"] .brand-card-img img,
-.brand-card[data-brand="hikaya-coffee"] .brand-card-img img,
-.brand-card[data-brand="seed-north"] .brand-card-img img {
-  object-position: center top;
+/* On the very narrow menu cards, scale down the headline a touch more */
+@media (min-width: 481px) and (max-width: 1100px) {
+  #menus .brand-card-overlay h3 { font-size: 15px; }
 }
 
 /* Carousel modal gallery — 4:5 portrait slides */
