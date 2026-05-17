@@ -2645,3 +2645,88 @@ footer {
   transition: transform .5s cubic-bezier(.7, 0, .2, 1);
 }
 .modal-social-cell:hover img { transform: scale(1.04); }
+
+/* ===========================================
+   SECTIONS 4 & 5 — CAROUSELS & MENUS
+=========================================== */
+
+/* Cover image on brand cards — for portrait-format cover slides
+   (carousels 4:5, menus 9:16) we use object-position: top to preserve
+   the brand logo and main visual at the top of each cover. */
+.brand-card[data-brand="del-arts"] .brand-card-img img,
+.brand-card[data-brand="taha-perfumes"] .brand-card-img img,
+.brand-card[data-brand="tune-karaoke"] .brand-card-img img,
+.brand-card[data-brand="ctrl-z-brokerage"] .brand-card-img img {
+  object-position: center 30%;
+}
+
+.brand-card[data-brand="nakha-khasa"] .brand-card-img img,
+.brand-card[data-brand="hikaya-coffee"] .brand-card-img img,
+.brand-card[data-brand="seed-north"] .brand-card-img img {
+  object-position: center top;
+}
+
+/* Carousel modal gallery — 4:5 portrait slides */
+.work-modal-gallery-carousel {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+@media (max-width: 900px) { .work-modal-gallery-carousel { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .work-modal-gallery-carousel { grid-template-columns: 1fr; } }
+
+.work-modal-gallery-carousel figure {
+  margin: 0;
+  background: var(--bg-soft);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.work-modal-gallery-carousel img {
+  width: 100%;
+  aspect-ratio: 4 / 5;        /* matches the natural slide ratio */
+  object-fit: cover;
+  display: block;
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+}
+.work-modal-gallery-carousel figure:hover img { transform: scale(1.04); }
+.work-modal-gallery-carousel figcaption {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple);
+  text-align: center;
+  letter-spacing: .04em;
+}
+
+/* Menu modal gallery — 9:16 story-format slides */
+.work-modal-gallery-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+@media (max-width: 980px) { .work-modal-gallery-menu { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 700px) { .work-modal-gallery-menu { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .work-modal-gallery-menu { grid-template-columns: 1fr; } }
+
+.work-modal-gallery-menu figure {
+  margin: 0;
+  background: var(--bg-soft);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.work-modal-gallery-menu img {
+  width: 100%;
+  aspect-ratio: 9 / 16;       /* matches the natural story slide ratio */
+  object-fit: cover;
+  display: block;
+  transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+}
+.work-modal-gallery-menu figure:hover img { transform: scale(1.04); }
+.work-modal-gallery-menu figcaption {
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--purple);
+  text-align: center;
+  letter-spacing: .04em;
+}
