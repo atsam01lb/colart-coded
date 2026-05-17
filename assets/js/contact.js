@@ -40,41 +40,49 @@
   if (!form) return;
 
   var WHATSAPP_NUMBER = '96170649423'; // +961 70 64 94 23
+  var submitted = false; // guard against double-submit
 
   form.addEventListener('submit', function () {
-    // The form already submits to FormSubmit via target="hidden_iframe" — that handles the email.
-    // We just need to also open WhatsApp with the same details. Wait a tick so the form posts first.
+    if (submitted) return;
+    submitted = true;
+
+    // Capture values BEFORE the form posts.
+    var fullName       = (document.getElementById('fullName').value || '').trim();
+    var emailAddress   = (document.getElementById('emailAddress').value || '').trim();
+    var phoneNumber    = (document.getElementById('phoneNumber').value || '').trim();
+    var serviceNeeded  = document.getElementById('serviceNeeded').value || '';
+    var projectDetails = (document.getElementById('projectDetails').value || '').trim();
+
+    // IMPORTANT: We do NOT preventDefault — the form POSTs normally to FormSubmit
+    // via target="hidden_iframe". That's what delivers the email.
+
+    // Build the WhatsApp pre-filled message
+    var lines = [
+      'Hello Colart, I just sent an inquiry through your website.',
+      '',
+      '*Full Name:* ' + fullName,
+      '*Email:* ' + emailAddress,
+      '*Phone:* ' + phoneNumber,
+      '*Service Needed:* ' + serviceNeeded,
+      '',
+      '*Project Details:*',
+      projectDetails
+    ];
+    var waText = encodeURIComponent(lines.join('\n'));
+    var waUrl  = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waText;
+
+    // Wait until the form POST has actually fired before doing UI things.
+    // Longer delay (1000ms) gives the iframe POST time to complete on slow connections
+    // before we reset the form or open new windows.
     setTimeout(function () {
-      var fullName     = (document.getElementById('fullName').value || '').trim();
-      var emailAddress = (document.getElementById('emailAddress').value || '').trim();
-      var phoneNumber  = (document.getElementById('phoneNumber').value || '').trim();
-      var serviceNeeded = document.getElementById('serviceNeeded').value || '';
-      var projectDetails = (document.getElementById('projectDetails').value || '').trim();
-
-      var lines = [
-        'Hello Colart, I just sent an inquiry through your website.',
-        '',
-        '*Full Name:* ' + fullName,
-        '*Email:* ' + emailAddress,
-        '*Phone:* ' + phoneNumber,
-        '*Service Needed:* ' + serviceNeeded,
-        '',
-        '*Project Details:*',
-        projectDetails
-      ];
-
-      var waText = encodeURIComponent(lines.join('\n'));
-      var waUrl = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + waText;
-
-      // Open WhatsApp in a new tab
+      // Open WhatsApp in a new tab. This must happen AFTER the form post is on its way.
       window.open(waUrl, '_blank', 'noopener');
 
-      // Show a friendly success state on the form
+      // Show success state and reset form
       showSuccessMessage();
-
-      // Reset the form
       form.reset();
-    }, 250);
+      submitted = false;
+    }, 1000);
   });
 
   function showSuccessMessage() {
