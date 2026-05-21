@@ -590,6 +590,15 @@ footer {
 }
 .foot-col a:hover { color: var(--magenta); transform: translateX(3px); }
 
+/* Get-in-touch icons — fixed width, spacing, brand color */
+.foot-col a i,
+.foot-col p i {
+  width: 18px;
+  margin-right: 8px;
+  color: var(--purple);
+  text-align: center;
+}
+
 .foot-mid {
   max-width: 1280px;
   margin: 0 auto;
