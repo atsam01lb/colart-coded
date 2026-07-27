@@ -47,43 +47,47 @@ document.addEventListener('DOMContentLoaded', function () {
     btn.addEventListener('click', closeSuccessModal);
   });
 
-  /* ============ CONTACT FORM SUBMIT (AJAX) ============ */
-  var contactForm = document.getElementById('contactForm');
-  var submitBtn = document.getElementById('contactSubmitBtn');
+  /* ============ CONTACT FORM SUBMIT ============ */
+var contactForm = document.getElementById('contactForm');
+var submitBtn = document.getElementById('contactSubmitBtn');
+var hiddenIframe = document.querySelector('iframe[name="hidden_iframe"]');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', function (e) {
-      e.preventDefault();
+var formHasSubmitted = false;
 
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.querySelector('span').textContent = 'Sending...';
+if (contactForm) {
+  contactForm.addEventListener('submit', function () {
+    formHasSubmitted = true;
+
+    if (submitBtn) {
+      submitBtn.disabled = true;
+
+      var btnText = submitBtn.querySelector('span');
+      if (btnText) {
+        btnText.textContent = 'Sending...';
       }
+    }
+  });
+}
 
-      var formData = new FormData(contactForm);
+if (hiddenIframe) {
+  hiddenIframe.addEventListener('load', function () {
+    if (!formHasSubmitted) return;
 
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { Accept: 'application/json' }
-      })
-        .then(function (response) {
-          if (response.ok) {
-            contactForm.reset();
-            openSuccessModal();
-          } else {
-            alert('Something went wrong sending your message. Please try again or reach us on WhatsApp.');
-          }
-        })
-        .catch(function () {
-          alert('Something went wrong sending your message. Please try again or reach us on WhatsApp.');
-        })
-        .finally(function () {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.querySelector('span').textContent = 'Send Inquiry';
-          }
-        });
+    contactForm.reset();
+    openSuccessModal();
+
+    if (submitBtn) {
+      submitBtn.disabled = false;
+
+      var btnText = submitBtn.querySelector('span');
+      if (btnText) {
+        btnText.textContent = 'Send Inquiry';
+      }
+    }
+
+    formHasSubmitted = false;
+  });
+}
     });
   }
 });
