@@ -170,9 +170,8 @@
     <form
       id="contactForm"
       class="contact-form fade-in"
-      action="https://formsubmit.co/elhindysamuel@icloud.com"
+      action="https://formsubmit.co/ajax/elhindysamuel@icloud.com"
       method="POST"
-      target="hidden_iframe"
     >
       <input type="hidden" name="_subject" value="New Contact Form Submission - Colart Website" />
       <input type="hidden" name="_captcha" value="false" />
@@ -232,7 +231,7 @@
       </div>
 
       <div class="contact-submit-row">
-        <button type="submit" class="btn-pill-gradient">
+        <button type="submit" class="btn-pill-gradient" id="contactSubmitBtn">
           <span>Send Inquiry</span>
           <i class="fa-solid fa-paper-plane"></i>
         </button>
@@ -241,8 +240,6 @@
         </p>
       </div>
     </form>
-
-    <iframe name="hidden_iframe" class="hidden-iframe" title="Hidden form target" aria-hidden="true"></iframe>
   </div>
 </section>
 
@@ -380,6 +377,21 @@
         Phone: +961 70 64 94 23 / +961 81 04 25 12</p>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ============ SUCCESS MODAL ============ -->
+<div class="success-modal" id="successModal" aria-hidden="true">
+  <div class="success-modal-overlay" data-success-close></div>
+
+  <div class="success-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="successModalTitle">
+    <button class="success-modal-close" type="button" data-success-close aria-label="Close">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="success-modal-icon"><i class="fa-solid fa-check"></i></div>
+    <h2 id="successModalTitle">Thank you for reaching out!</h2>
+    <p>Your inquiry has been received. Our team at Colart will review it and get back to you shortly.</p>
   </div>
 </div>
 
