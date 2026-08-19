@@ -3176,6 +3176,22 @@ footer {
   word-break: break-word;
 }
 
+/* Social row inside the Direct Contact card */
+.contact-direct-social {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+.contact-direct-social-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--magenta);
+  margin-bottom: 12px;
+}
+
 /* ===========================================
    CONTACT FORM
 =========================================== */
@@ -3251,6 +3267,73 @@ footer {
   border-color: var(--purple);
   box-shadow: 0 0 0 4px rgba(100, 40, 120, .12);
   background: #fff;
+}
+
+/* "Service Needed" checklist */
+.service-checklist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+@media (max-width: 700px) { .service-checklist { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 420px) { .service-checklist { grid-template-columns: 1fr; } }
+
+.service-check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+  transition: all .25s;
+}
+.service-check:hover { border-color: rgba(100, 40, 120, .3); }
+.service-check input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.service-check-box {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  display: grid;
+  place-items: center;
+  transition: all .25s;
+}
+.service-check-box i {
+  color: #fff;
+  font-size: 11px;
+  opacity: 0;
+  transform: scale(.4);
+  transition: opacity .25s, transform .25s;
+}
+.service-check input[type="checkbox"]:checked ~ .service-check-box {
+  background: linear-gradient(135deg, var(--purple), var(--magenta));
+  border-color: var(--purple);
+}
+.service-check input[type="checkbox"]:checked ~ .service-check-box i {
+  opacity: 1;
+  transform: scale(1);
+}
+.service-check:has(input[type="checkbox"]:checked) {
+  border-color: var(--purple);
+  background: rgba(100, 40, 120, .04);
+}
+.service-check input[type="checkbox"]:focus-visible ~ .service-check-box {
+  outline: 2px solid var(--magenta);
+  outline-offset: 3px;
+}
+.service-check-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 /* Terms checkbox row */
@@ -3468,6 +3551,102 @@ footer {
   line-height: 1.7;
   color: var(--ink);
   margin-bottom: 10px;
+}
+.terms-modal-body ul {
+  margin: 0 0 10px;
+  padding-left: 22px;
+}
+.terms-modal-body li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.terms-modal-body strong { color: var(--purple); }
+
+/* ===========================================
+   SUCCESS MODAL
+=========================================== */
+.success-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .4s ease, visibility .4s;
+}
+.success-modal.is-open {
+  visibility: visible;
+  opacity: 1;
+}
+.success-modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 20, 36, .85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.success-modal-dialog {
+  position: relative;
+  background: #fff;
+  margin: 14vh auto;
+  max-width: 440px;
+  width: calc(100% - 32px);
+  border-radius: 24px;
+  padding: 46px 34px 40px;
+  text-align: center;
+  box-shadow: 0 30px 100px rgba(0, 0, 0, .5);
+  transform: translateY(20px) scale(.98);
+  transition: transform .5s cubic-bezier(.2, .7, .2, 1);
+}
+.success-modal.is-open .success-modal-dialog { transform: translateY(0) scale(1); }
+@media (max-width: 600px) {
+  .success-modal-dialog { margin: 10vh auto; padding: 40px 26px 34px; }
+}
+.success-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-soft);
+  color: var(--ink);
+  font-size: 15px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: all .3s;
+}
+.success-modal-close:hover {
+  background: var(--purple);
+  color: #fff;
+  transform: rotate(90deg);
+}
+.success-modal-icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--lime), var(--mint));
+  color: #fff;
+  font-size: 28px;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px rgba(140, 180, 60, .3);
+}
+.success-modal-dialog h2 {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -.01em;
+  color: var(--ink);
+  margin-bottom: 12px;
+}
+.success-modal-dialog p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
 }
 
 /* ===========================================
