@@ -1503,6 +1503,16 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* Reviews page hero — custom photo, with a soft light wash so text stays readable */
+.inner-hero.reviews-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
+    url('../images/reviews-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 /* Team page hero — custom illustration, with a soft light wash so text stays readable */
 .inner-hero.team-hero-bg {
   background-image:
