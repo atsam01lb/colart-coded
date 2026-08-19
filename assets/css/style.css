@@ -2095,6 +2095,7 @@ footer {
   position: absolute;
   inset: 0;
   background: url('../images/our-work-hero-bg.jpg') center/cover no-repeat;
+  opacity: .25;
   z-index: -2;
 }
 .work-hero-overlay {
@@ -2788,11 +2789,22 @@ footer {
   letter-spacing: .04em;
 }
 
-/* Section 6 — Website Previews: 4:3 landscape (matches browser screenshots) */
-#websites .brand-card { aspect-ratio: 4 / 3; }
-#websites .brand-card-img img { object-position: top center; }
+/* Section 6 — Website Previews: wide landscape box, full screenshot always visible (no cropping) */
+#websites .brand-card { aspect-ratio: 16 / 10; }
+#websites .brand-card-img {
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#websites .brand-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
 
-/* Website preview modal gallery — 4:3 landscape screenshots */
+/* Website preview modal gallery — full screenshot always visible (no cropping) */
 .work-modal-gallery-website {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2806,12 +2818,14 @@ footer {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
 }
 .work-modal-gallery-website img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  object-position: top center;
+  aspect-ratio: 16 / 10;
+  object-fit: contain;
+  object-position: center center;
   display: block;
   transition: transform .6s cubic-bezier(.2, .7, .2, 1);
 }
