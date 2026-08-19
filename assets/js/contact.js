@@ -1,8 +1,12 @@
-document.addEventListener('DOMContentLoaded', function () {
-  /* ============ TERMS OF SERVICE MODAL ============ */
+/* ===========================================
+   CONTACT PAGE — Terms modal, success modal,
+   and the hidden-iframe FormSubmit flow
+=========================================== */
+(function() {
+  'use strict';
+
+  /* ===== Terms of Service modal ===== */
   var termsModal = document.getElementById('termsModal');
-  var termsOpenBtns = document.querySelectorAll('[data-terms-open]');
-  var termsCloseBtns = document.querySelectorAll('[data-terms-close]');
 
   function openTermsModal() {
     if (!termsModal) return;
@@ -10,24 +14,21 @@ document.addEventListener('DOMContentLoaded', function () {
     termsModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
-
   function closeTermsModal() {
     if (!termsModal) return;
     termsModal.classList.remove('is-open');
     termsModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
-  termsOpenBtns.forEach(function (btn) {
+  document.querySelectorAll('[data-terms-open]').forEach(function(btn) {
     btn.addEventListener('click', openTermsModal);
   });
-  termsCloseBtns.forEach(function (btn) {
-    btn.addEventListener('click', closeTermsModal);
+  document.querySelectorAll('[data-terms-close]').forEach(function(el) {
+    el.addEventListener('click', closeTermsModal);
   });
 
-  /* ============ SUCCESS MODAL ============ */
+  /* ===== Success modal ===== */
   var successModal = document.getElementById('successModal');
-  var successCloseBtns = document.querySelectorAll('[data-success-close]');
 
   function openSuccessModal() {
     if (!successModal) return;
@@ -35,59 +36,56 @@ document.addEventListener('DOMContentLoaded', function () {
     successModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
-
   function closeSuccessModal() {
     if (!successModal) return;
     successModal.classList.remove('is-open');
     successModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
-  successCloseBtns.forEach(function (btn) {
-    btn.addEventListener('click', closeSuccessModal);
+  document.querySelectorAll('[data-success-close]').forEach(function(el) {
+    el.addEventListener('click', closeSuccessModal);
   });
 
-  /* ============ CONTACT FORM SUBMIT ============ */
-var contactForm = document.getElementById('contactForm');
-var submitBtn = document.getElementById('contactSubmitBtn');
-var hiddenIframe = document.querySelector('iframe[name="hidden_iframe"]');
+  /* ===== ESC key closes whichever modal is open ===== */
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Escape') return;
+    if (termsModal && termsModal.classList.contains('is-open')) closeTermsModal();
+    if (successModal && successModal.classList.contains('is-open')) closeSuccessModal();
+  });
 
-var formHasSubmitted = false;
+  /* =====================================================
+     Contact form:
+     - require at least one "Service Needed" checkbox
+     - submit into the hidden iframe (FormSubmit.co)
+     - the iframe also fires a "load" event once on the
+       page's initial render (its blank starting document),
+       so only react to "load" AFTER an actual submit
+  ===================================================== */
+  var form = document.getElementById('contactForm');
+  var iframe = document.querySelector('.hidden-iframe');
+  var serviceChecklist = document.getElementById('serviceChecklist');
+  var didSubmit = false;
 
-if (contactForm) {
-  contactForm.addEventListener('submit', function () {
-    formHasSubmitted = true;
-
-    if (submitBtn) {
-      submitBtn.disabled = true;
-
-      var btnText = submitBtn.querySelector('span');
-      if (btnText) {
-        btnText.textContent = 'Sending...';
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      if (serviceChecklist) {
+        var anyChecked = serviceChecklist.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+        if (!anyChecked) {
+          e.preventDefault();
+          alert('Please select at least one service.');
+          return;
+        }
       }
-    }
-  });
-}
-
-if (hiddenIframe) {
-  hiddenIframe.addEventListener('load', function () {
-    if (!formHasSubmitted) return;
-
-    contactForm.reset();
-    openSuccessModal();
-
-    if (submitBtn) {
-      submitBtn.disabled = false;
-
-      var btnText = submitBtn.querySelector('span');
-      if (btnText) {
-        btnText.textContent = 'Send Inquiry';
-      }
-    }
-
-    formHasSubmitted = false;
-  });
-}
+      didSubmit = true;
     });
   }
-});
+
+  if (iframe) {
+    iframe.addEventListener('load', function() {
+      if (!didSubmit) return;
+      didSubmit = false;
+      openSuccessModal();
+      if (form) form.reset();
+    });
+  }
+})();
