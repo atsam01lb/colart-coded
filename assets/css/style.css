@@ -3529,3 +3529,22 @@ footer {
 }
 .team-modal-bio p:last-child { margin-bottom: 0; }
 .team-modal-bio strong { color: var(--purple); }
+
+/* "Join Our Team" CTA card — 8th grid item, styled as an invitation rather than a person */
+.team-card-join {
+  background: linear-gradient(150deg, rgba(100, 40, 120, .05) 0%, rgba(200, 20, 120, .05) 100%);
+  border: 1.5px dashed rgba(100, 40, 120, .3);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.team-card-join:hover {
+  border-style: solid;
+  border-color: rgba(100, 40, 120, .3);
+}
+.team-card-join .team-card-avatar {
+  background: linear-gradient(135deg, var(--purple), var(--magenta));
+  color: #fff;
+}
+.team-card-join .team-card-role { color: var(--purple); }
+.team-card-join a.team-card-readmore { text-decoration: none; }
