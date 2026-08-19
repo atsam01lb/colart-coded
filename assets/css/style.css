@@ -836,6 +836,11 @@ footer {
   margin: 0 auto 16px;
 }
 .welcome-text:last-child { margin-bottom: 0; }
+.welcome-cta {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+}
 .welcome-dot {
   position: absolute;
   border-radius: 50%;
