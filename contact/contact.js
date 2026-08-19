@@ -1,80 +1,91 @@
 /* ===========================================
-   OUR WORK PAGE — MODAL LOGIC
+   CONTACT PAGE — Terms modal, success modal,
+   and the hidden-iframe FormSubmit flow
 =========================================== */
 (function() {
   'use strict';
 
-  // ===== Open modals when clicking brand cards =====
-  document.querySelectorAll('.brand-card').forEach(function(card) {
-    card.addEventListener('click', function() {
-      var brand = card.getAttribute('data-brand');
-      if (!brand) return;
-      openModal('modal-' + brand);
-    });
-  });
+  /* ===== Terms of Service modal ===== */
+  var termsModal = document.getElementById('termsModal');
 
-  // ===== Open "View All" modal buttons =====
-  document.querySelectorAll('.btn-view-all').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var target = btn.getAttribute('data-modal');
-      if (!target) return;
-      openModal('modal-' + target);
-    });
-  });
-
-  // ===== Close on backdrop click or close button =====
-  document.querySelectorAll('[data-close-modal]').forEach(function(el) {
-    el.addEventListener('click', function() {
-      closeAllModals();
-    });
-  });
-
-  // ===== Close on ESC key =====
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') closeAllModals();
-  });
-
-  // ===== Helper functions =====
-  function openModal(id) {
-    var modal = document.getElementById(id);
-    if (!modal) return;
-    modal.classList.add('is-open');
-    modal.setAttribute('aria-hidden', 'false');
+  function openTermsModal() {
+    if (!termsModal) return;
+    termsModal.classList.add('is-open');
+    termsModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
-    // Scroll modal to top
-    var content = modal.querySelector('.work-modal-content');
-    if (content) content.scrollTop = 0;
   }
-
-  function closeAllModals() {
-    document.querySelectorAll('.work-modal.is-open').forEach(function(m) {
-      m.classList.remove('is-open');
-      m.setAttribute('aria-hidden', 'true');
-    });
+  function closeTermsModal() {
+    if (!termsModal) return;
+    termsModal.classList.remove('is-open');
+    termsModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
-
-  // ===== Smooth scroll for the in-page anchor link from hero =====
-  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
-    link.addEventListener('click', function(e) {
-      var href = link.getAttribute('href');
-      if (href === '#' || href.length < 2) return;
-      var target = document.querySelector(href);
-      if (!target) return;
-      e.preventDefault();
-      var headerHeight = 80;
-      var top = target.getBoundingClientRect().top + window.scrollY - headerHeight;
-      window.scrollTo({ top: top, behavior: 'smooth' });
-    });
+  document.querySelectorAll('[data-terms-open]').forEach(function(btn) {
+    btn.addEventListener('click', openTermsModal);
+  });
+  document.querySelectorAll('[data-terms-close]').forEach(function(el) {
+    el.addEventListener('click', closeTermsModal);
   });
 
-  // ===== Handle missing images gracefully (e.g. 032.png placeholder) =====
-  document.querySelectorAll('.modal-logo-cell img, .logo-preview-card img, .modal-social-cell img, .social-preview-card img, .work-modal-gallery-carousel img, .work-modal-gallery-menu img').forEach(function(img) {
-    img.addEventListener('error', function() {
-      // Hide cell if image fails to load
-      var cell = img.closest('.modal-logo-cell, .logo-preview-card, .modal-social-cell, .social-preview-card, .work-modal-gallery-carousel figure, .work-modal-gallery-menu figure');
-      if (cell) cell.style.display = 'none';
-    });
+  /* ===== Success modal ===== */
+  var successModal = document.getElementById('successModal');
+
+  function openSuccessModal() {
+    if (!successModal) return;
+    successModal.classList.add('is-open');
+    successModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSuccessModal() {
+    if (!successModal) return;
+    successModal.classList.remove('is-open');
+    successModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('[data-success-close]').forEach(function(el) {
+    el.addEventListener('click', closeSuccessModal);
   });
 
+  /* ===== ESC key closes whichever modal is open ===== */
+  document.addEventListener('keydown', function(e) {
+    if (e.key !== 'Escape') return;
+    if (termsModal && termsModal.classList.contains('is-open')) closeTermsModal();
+    if (successModal && successModal.classList.contains('is-open')) closeSuccessModal();
+  });
+
+  /* =====================================================
+     Contact form:
+     - require at least one "Service Needed" checkbox
+     - submit into the hidden iframe (FormSubmit.co)
+     - the iframe also fires a "load" event once on the
+       page's initial render (its blank starting document),
+       so only react to "load" AFTER an actual submit
+  ===================================================== */
+  var form = document.getElementById('contactForm');
+  var iframe = document.querySelector('.hidden-iframe');
+  var serviceChecklist = document.getElementById('serviceChecklist');
+  var didSubmit = false;
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      if (serviceChecklist) {
+        var anyChecked = serviceChecklist.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+        if (!anyChecked) {
+          e.preventDefault();
+          alert('Please select at least one service.');
+          return;
+        }
+      }
+      didSubmit = true;
+    });
+  }
+
+  if (iframe) {
+    iframe.addEventListener('load', function() {
+      if (!didSubmit) return;
+      didSubmit = false;
+      openSuccessModal();
+      if (form) form.reset();
+    });
+  }
 })();
