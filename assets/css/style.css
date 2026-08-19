@@ -1490,6 +1490,17 @@ footer {
   overflow: hidden;
   text-align: center;
 }
+
+/* Services page hero — custom background photo, with a soft light wash so text stays readable */
+.inner-hero.services-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
+    url('../images/services-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .inner-hero-content {
   max-width: 880px;
   margin: 0 auto;
