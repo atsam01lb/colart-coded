@@ -1105,14 +1105,13 @@ footer {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .02em;
-  transition: transform .3s, box-shadow .3s, filter .3s;
-  box-shadow: 0 10px 30px rgba(200, 20, 120, .3);
+  transition: transform .4s cubic-bezier(.2, .7, .2, 1), box-shadow .4s cubic-bezier(.2, .7, .2, 1);
+  box-shadow: 0 4px 16px rgba(26, 20, 36, .1);
 }
 .btn-pill-gradient i { font-size: 12px; transition: transform .3s; }
 .btn-pill-gradient:hover {
   transform: translateY(-2px);
-  filter: brightness(1.08);
-  box-shadow: 0 14px 40px rgba(200, 20, 120, .4);
+  box-shadow: 0 10px 26px rgba(26, 20, 36, .16);
 }
 .btn-pill-gradient:hover i { transform: translateX(4px); }
 
@@ -1507,6 +1506,16 @@ footer {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
     url('../images/reviews-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contact page hero — custom photo, with a soft light wash so text stays readable */
+.inner-hero.contact-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
+    url('../images/contact-hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
