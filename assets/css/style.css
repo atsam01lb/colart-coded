@@ -3395,15 +3395,18 @@ footer {
 .team-section .container { max-width: 1300px; margin: 0 auto; }
 @media (max-width: 768px) { .team-section { padding: 20px 24px 80px; } }
 
+/* Flex + wrap + center instead of a strict grid, so an uneven last row
+   (e.g. 7 members = 2 full rows + 1) centers itself instead of hugging the left edge. */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 26px;
 }
-@media (max-width: 980px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .team-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; } }
 
 .team-card {
+  flex: 1 1 340px;
+  max-width: 380px;
   background: #fff;
   border-radius: 22px;
   padding: 36px 30px;
@@ -3414,6 +3417,7 @@ footer {
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 600px) { .team-card { flex-basis: 100%; max-width: 380px; } }
 .team-card::before {
   content: "";
   position: absolute;
@@ -3433,6 +3437,7 @@ footer {
 .team-card:hover::before { transform: scaleX(1); }
 
 .team-card-avatar {
+  position: relative;
   width: 104px;
   height: 104px;
   border-radius: 50%;
@@ -3445,7 +3450,17 @@ footer {
   overflow: hidden;
   transition: all .4s;
 }
+/* Fallback fa-user icon sits behind the photo. If the <img> 404s (no headshot
+   uploaded yet), its onerror hides it and the icon shows through automatically. */
+.team-card-avatar i {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
 .team-card-avatar img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -3498,3 +3513,19 @@ footer {
   background: var(--purple);
   color: #fff;
 }
+
+/* "Read Full Bio" trigger — reuses .service-link's look, reset as a <button> */
+.team-card-readmore {
+  border: none;
+  cursor: pointer;
+}
+
+/* Full bio text inside the team member modal */
+.team-modal-bio p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 14px;
+}
+.team-modal-bio p:last-child { margin-bottom: 0; }
+.team-modal-bio strong { color: var(--purple); }
