@@ -1501,6 +1501,16 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* Team page hero — custom illustration, with a soft light wash so text stays readable */
+.inner-hero.team-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
+    url('../images/team-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .inner-hero-content {
   max-width: 880px;
   margin: 0 auto;
@@ -2101,8 +2111,7 @@ footer {
 .work-hero-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(135deg, rgba(100, 40, 120, .35) 0%, rgba(200, 20, 120, .25) 50%, rgba(26, 20, 36, .55) 100%);
+  background: rgba(0, 0, 0, .15);
   z-index: -1;
 }
 .work-hero-dot {
