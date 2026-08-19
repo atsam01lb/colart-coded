@@ -85,85 +85,219 @@
   </div>
 </section>
 <!-- ============ TEAM GRID ============ -->
-<!-- TODO: Replace each card's placeholder avatar, name, role, and bio with real team member details and headshots. Duplicate a .team-card article for additional members. -->
+<!-- Each avatar looks for an image at ../assets/images/team/<slug>.jpg — see chat for exact filenames/sizes.
+     Until that file exists, the fa-user icon behind it shows through automatically (no broken-image icon). -->
 <section class="team-section">
   <div class="container">
     <div class="team-grid fade-in-stagger">
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/samuel-el-hindy.jpg" alt="Samuel El Hindy — Founder" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Samuel El Hindy</h3>
+        <p class="team-card-role">Founder</p>
+        <p class="team-card-bio">Turning ideas into distinctive brands and meaningful digital experiences.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="samuel">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/luna-mouchaham.jpg" alt="Luna Mouchaham — Administrative Assistant, HR & Public Relations" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Luna Mouchaham</h3>
+        <p class="team-card-role">Administrative Assistant, HR &amp; Public Relations</p>
+        <p class="team-card-bio">Keeping Colart's operations, people, and relationships running smoothly.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="luna">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/jad-bou-jaoude.jpg" alt="Jad Bou Jaoude — Graphic Designer & Creative Management" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Jad Bou Jaoude</h3>
+        <p class="team-card-role">Graphic Designer &amp; Creative Management</p>
+        <p class="team-card-bio">Turning ideas into distinctive designs and consistent brand identities.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="jad-bj">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/jean-paul-haswany.jpg" alt="Jean Paul Haswany — Motion Designer & Animator" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Jean Paul Haswany</h3>
+        <p class="team-card-role">Motion Designer &amp; Animator</p>
+        <p class="team-card-bio">Bringing brands to life through 2D/3D motion graphics and visual storytelling.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="jeanpaul">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/jad-baroudy.jpg" alt="Jad Baroudy — Web Developer" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Jad Baroudy</h3>
+        <p class="team-card-role">Web Developer</p>
+        <p class="team-card-bio">Building responsive, scalable, and user-focused web applications end to end.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="jad-baroudy">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
       <article class="team-card">
         <div class="team-card-avatar">
           <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/maguy-al-massry.jpg" alt="Maguy Al Massry — Junior Graphic Designer" loading="lazy" onerror="this.style.display='none'" />
         </div>
-        <h3 class="team-card-name">Team Member</h3>
-        <p class="team-card-role">Role Title</p>
-        <p class="team-card-bio">A short bio goes here — background, specialty, or what they bring to client projects.</p>
-        <div class="team-card-socials">
-          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        </div>
+        <h3 class="team-card-name">Maguy Al Massry</h3>
+        <p class="team-card-role">Junior Graphic Designer</p>
+        <p class="team-card-bio">Fresh perspective and sharp attention to detail on every brand visual.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="maguy">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
       </article>
+
+      <article class="team-card">
+        <div class="team-card-avatar">
+          <i class="fa-solid fa-user"></i>
+          <img src="../assets/images/team/georges-mounzer.jpg" alt="Georges Mounzer — Content Writer" loading="lazy" onerror="this.style.display='none'" />
+        </div>
+        <h3 class="team-card-name">Georges Mounzer</h3>
+        <p class="team-card-role">Content Writer</p>
+        <p class="team-card-bio">Turning brand stories into clear, engaging copy that connects with audiences.</p>
+        <button type="button" class="service-link team-card-readmore" data-modal-open="georges">
+          <span>Read Full Bio</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </article>
+
     </div>
   </div>
 </section>
+<!-- ============ TEAM BIO MODALS ============ -->
+<div class="work-modal" id="modal-samuel" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-samuel-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Founder</span>
+      <h3 id="modal-samuel-title">Samuel El Hindy</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Samuel Hindy is the Founder of Colart Digital Marketing Agency, a creative entrepreneur focused on transforming ideas into distinctive brands and meaningful digital experiences.</p>
+      <p>With a passion for branding, digital marketing, content creation, website design, and development, Samuel founded Colart with a vision to bring creativity, strategy, and technology together to help businesses establish a strong presence and achieve sustainable growth.</p>
+      <p>Driven by the belief that every brand has a unique story, he approaches each project with a focus on identity, innovation, and purpose, creating solutions designed to connect with people and leave a lasting impression.</p>
+      <p><strong>We create. You grow.</strong></p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-luna" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-luna-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Administrative Assistant, HR &amp; Public Relations</span>
+      <h3 id="modal-luna-title">Luna Mouchaham</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Luna Mouchaham serves as Administrative Assistant, HR &amp; Public Relations at Colart Digital Marketing Agency, supporting the agency's daily operations, team coordination, and professional relationships.</p>
+      <p>Her role combines administrative organization, human resources support, internal communication, and public relations, helping ensure smooth operations while fostering a positive and well-structured work environment.</p>
+      <p>Luna also contributes to strengthening Colart's relationships with <strong>clients, partners, and the community</strong>, representing the agency with professionalism and effective communication.</p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-jad-bj" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-jad-bj-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Graphic Designer &amp; Creative Management</span>
+      <h3 id="modal-jad-bj-title">Jad Bou Jaoude</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Jad Elias Bou Jaoude is a Graphic Designer &amp; Creative Management professional at Colart, bringing together creativity, visual communication, and a diverse professional background.</p>
+      <p>With experience in graphic design and fashion design, Jad combines a strong creative perspective with practical expertise in Photoshop and CorelDRAW. His multidisciplinary background has also developed his skills in team coordination, organization, customer relations, and operational management.</p>
+      <p>At Colart, Jad contributes to the development of visual concepts, brand identities, and creative directions, helping transform ideas into distinctive designs while supporting the management and consistency of the agency's creative output.</p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-jeanpaul" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-jeanpaul-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Motion Designer &amp; Animator</span>
+      <h3 id="modal-jeanpaul-title">Jean Paul Haswany</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Jean Paul Haswany is a Motion Designer &amp; Animator at Colart, specializing in 2D and 3D motion graphics, animation, and visual storytelling. He transforms creative concepts into engaging visual experiences through the combination of design, movement, and storytelling.</p>
+      <p>From concept development and storyboarding to animation and final execution, Jean Paul brings ideas to life with a strong focus on visual direction, detail, and creative expression.</p>
+      <p>Driven by curiosity and a passion for motion, he continuously explores new techniques and creative approaches, creating dynamic and purposeful visuals that strengthen the stories behind brands and ideas.</p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-jad-baroudy" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-jad-baroudy-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Web Developer</span>
+      <h3 id="modal-jad-baroudy-title">Jad Baroudy</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Jad Baroudy is a Full-Stack Web Developer at Colart, specializing in React, Node.js, REST APIs, and SQL. He develops responsive, scalable, and user-focused web applications, working across both frontend and backend technologies.</p>
+      <p>With a strong focus on clean code, performance, and problem-solving, Jad transforms ideas and creative concepts into reliable, functional, and seamless digital experiences.</p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-maguy" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-maguy-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Junior Graphic Designer</span>
+      <h3 id="modal-maguy-title">Maguy Al Massry</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Maguy Al Massry is a Junior Graphic Designer at Colart, bringing creativity, fresh perspectives, and attention to detail to the agency's visual projects.</p>
+      <p>With a growing passion for graphic design, branding, and visual communication, Maguy contributes to creating engaging social media visuals, marketing materials, and brand-focused designs that reflect each client's identity.</p>
+      <p>At Colart, she continues to develop her creative skills while collaborating with the team to transform ideas into clear, attractive, and meaningful visual experiences.</p>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-georges" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-georges-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">Content Writer</span>
+      <h3 id="modal-georges-title">Georges Mounzer</h3>
+    </div>
+    <div class="team-modal-bio">
+      <p>Georges Mounzer is a Content Writer at Colart and a Media and Journalism graduate, bringing a strong understanding of communication, storytelling, and audience engagement to the agency's creative work.</p>
+      <p>With an academic background in media and journalism, Georges contributes to developing creative concepts, brand messaging, social media content, articles, and marketing copy, adapting his writing style to reflect each brand's identity and voice.</p>
+      <p>At Colart, he works alongside the creative and marketing teams to transform ideas into <strong>clear, engaging, and purposeful content</strong> that connects brands with their audiences.</p>
+    </div>
+  </div>
+</div>
 <!-- ============ FINAL CTA ============ -->
 <section class="final-cta-section">
   <div class="container">
@@ -258,5 +392,44 @@
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 <script src="../assets/js/main.js"></script>
+<script>
+/* ===== Team bio modal logic (self-contained, no dependency on work.js) ===== */
+(function() {
+  'use strict';
+
+  document.querySelectorAll('[data-modal-open]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.getAttribute('data-modal-open');
+      var modal = document.getElementById('modal-' + id);
+      if (!modal) return;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      var content = modal.querySelector('.work-modal-content');
+      if (content) content.scrollTop = 0;
+    });
+  });
+
+  document.querySelectorAll('[data-close-modal]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      document.querySelectorAll('.work-modal.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+        m.setAttribute('aria-hidden', 'true');
+      });
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.work-modal.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+        m.setAttribute('aria-hidden', 'true');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
 </body>
 </html>
