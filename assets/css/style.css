@@ -1531,6 +1531,17 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* Collaborations page hero — custom illustration; extra-strong wash since this
+   image is more saturated/busy than the other hero photos, to keep text readable */
+.inner-hero.collaboration-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .94), rgba(255, 255, 255, .94)),
+    url('../images/collaboration-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .inner-hero-content {
   max-width: 880px;
   margin: 0 auto;
