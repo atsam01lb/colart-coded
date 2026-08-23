@@ -389,10 +389,14 @@
       if (word.indexOf(" ") !== -1) return input.indexOf(word) !== -1;
       return new RegExp("\\b" + word + "\\b", "i").test(input);
     }
+    // Collapses runs of repeated letters ("hiii" / "heyy" / "hellooo") down to one,
+    // so casual typing still matches the canonical word ("hi" / "hey" / "helo").
+    function normalizeWord(w) { return w.replace(/(.)\1+/g, "$1"); }
     function isGreeting(text) {
-      var input = text.toLowerCase().trim();
-      if (input.split(/\s+/).length > 4) return false;
-      return GREETING_WORDS.some(function (w) { return containsWord(input, w); });
+      var words = text.toLowerCase().trim().split(/[^a-z]+/).filter(Boolean);
+      if (!words.length || words.length > 4) return false;
+      var normalizedGreetings = GREETING_WORDS.map(normalizeWord);
+      return words.some(function (w) { return normalizedGreetings.indexOf(normalizeWord(w)) !== -1; });
     }
     function isHelpRequest(text) {
       var input = text.toLowerCase();
