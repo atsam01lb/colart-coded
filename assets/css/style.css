@@ -880,12 +880,13 @@ footer {
 }
 .chatbot-input-row input {
   flex: 1;
+  min-width: 0;
   border: none;
   outline: none;
   background: var(--bg-soft);
   border-radius: 999px;
   padding: 11px 16px;
-  font-size: 13.5px;
+  font-size: 16px;
   font-family: inherit;
   color: var(--ink);
 }
@@ -930,7 +931,20 @@ footer {
   .chatbot-launcher { width: 54px; height: 54px; }
   .chatbot-launcher i { font-size: 22px; }
   .chatbot-launcher-label { font-size: 12px; padding: 8px 14px; }
-  .chatbot-panel { width: calc(100vw - 24px); height: calc(100vh - 120px); bottom: 68px; right: -6px; }
+  .chatbot-panel {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 16px;
+    bottom: 86px;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+  }
+  .chatbot-quick-replies { padding: 0 14px 12px; gap: 7px; }
+  .chatbot-chip { font-size: 12px; padding: 7px 12px; }
+  .chatbot-agent-btn { width: calc(100% - 24px); margin: 0 12px 12px; font-size: 12.5px; }
 }
 
 /* ===========================================
