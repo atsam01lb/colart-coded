@@ -1020,6 +1020,30 @@ footer {
 .stat-link i { font-size: 13px; }
 .stat-link:hover { gap: 10px; color: var(--magenta); }
 
+.stat-kpi-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.stat-kpi {
+  background: var(--bg-soft);
+  border-radius: 12px;
+  padding: 12px 10px;
+  text-align: center;
+}
+.stat-kpi-num {
+  display: block;
+  font-size: 21px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1.2;
+}
+.stat-kpi-label { display: block; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; margin-top: 2px; }
+
 /* ===========================================
    15. ANIMATIONS
 =========================================== */
