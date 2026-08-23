@@ -39,6 +39,87 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What services does Colart offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Colart offers five core services under one roof: Brand Identity, Social Media Management, Digital Marketing, Media Production, and Website Development. Each can be handled individually or combined into a full-service package, depending on what your business needs to grow."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Colart work with businesses outside Lebanon?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. While Colart is based in Lebanon, we work remotely with clients across the GCC and beyond. Most of our process, strategy calls, content reviews, and campaign management happens online, so location isn't a barrier to working together."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I get started with Colart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reach out through our Contact page or WhatsApp with a bit about your business and what you need. We'll follow up to understand your goals, then walk you through a proposal and next steps tailored to your project."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer one-time projects or ongoing retainers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both. Some services, like a logo or a website, are natural one-time projects. Others, like social media management or digital marketing, work best as an ongoing monthly retainer so your brand stays active and consistent."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much do your services cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pricing depends on the scope, service, and goals of each project, so we don't publish flat rates. Reach out with details about what you need, and we'll put together a custom quote."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's your payment structure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Payment terms are agreed on a per-project basis and outlined before work begins, typically structured around a deposit followed by milestone or monthly payments. Full details are shared as part of our Terms of Service once a project starts."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a typical project take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Timelines vary by service. A brand identity project might take a few weeks, while an ongoing social media or marketing retainer runs monthly. We'll give you a clear timeline as part of your proposal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see examples of your past work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Visit our Our Work page for real client projects across branding, social media, and campaigns, or check Reviews to hear directly from businesses we've worked with."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Colart?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach us by email at info@colartdigitalmarketingagency.com, by phone or WhatsApp, or through the contact form on our Contact page."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <!-- ============ HEADER ============ -->
@@ -357,6 +438,39 @@
     </div>
   </div>
 </section>
+<!-- ============ SECTION 9 — FAQ ============ -->
+<section class="faq-section" id="faq">
+  <div class="container">
+    <div class="section-head fade-in">
+      <span class="section-eyebrow-pill">FAQ</span>
+      <h2>Answers to what you're <span class="magenta">probably wondering</span></h2>
+      <p>A few quick answers before you reach out. If your question isn't here, our full FAQ has more.</p>
+    </div>
+    <div class="faq-grid fade-in-stagger">
+      <article class="faq-card">
+        <div class="faq-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>What services does Colart offer?</h3>
+        <p>Colart offers five core services under one roof: Brand Identity, Social Media Management, Digital Marketing, Media Production, and Website Development. Each can be handled individually or combined into a full-service package, depending on what your business needs to grow.</p>
+      </article>
+      <article class="faq-card">
+        <div class="faq-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
+        <h3>Does Colart work with businesses outside Lebanon?</h3>
+        <p>Yes. While Colart is based in Lebanon, we work remotely with clients across the GCC and beyond. Most of our process, strategy calls, content reviews, and campaign management happens online, so location isn't a barrier to working together.</p>
+      </article>
+      <article class="faq-card">
+        <div class="faq-card-icon"><i class="fa-solid fa-rocket"></i></div>
+        <h3>How do I get started with Colart?</h3>
+        <p>Reach out through our Contact page or WhatsApp with a bit about your business and what you need. We'll follow up to understand your goals, then walk you through a proposal and next steps tailored to your project.</p>
+      </article>
+    </div>
+    <div class="faq-explore fade-in">
+      <button type="button" class="btn-pill-gradient" data-modal-open="faq-all">
+        <span>See All FAQs</span>
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
 <!-- ============ FOOTER ============ -->
 <footer>
   <div class="foot-top">
@@ -427,6 +541,96 @@
   <span class="tooltip">Message us on WhatsApp</span>
   <i class="fa-brands fa-whatsapp"></i>
 </a>
+
+<!-- ============ FAQ MODAL (See All FAQs) ============ -->
+<div class="work-modal" id="modal-faq-all" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content faq-modal-content" role="dialog" aria-labelledby="modal-faq-all-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">FAQ</span>
+      <h3 id="modal-faq-all-title">Frequently Asked Questions</h3>
+    </div>
+    <div class="faq-accordion">
+      <details class="faq-item" open>
+        <summary>What services does Colart offer?</summary>
+        <p>Colart offers five core services under one roof: Brand Identity, Social Media Management, Digital Marketing, Media Production, and Website Development. Each can be handled individually or combined into a full-service package, depending on what your business needs to grow.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does Colart work with businesses outside Lebanon?</summary>
+        <p>Yes. While Colart is based in Lebanon, we work remotely with clients across the GCC and beyond. Most of our process, strategy calls, content reviews, and campaign management happens online, so location isn't a barrier to working together.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do I get started with Colart?</summary>
+        <p>Reach out through our Contact page or WhatsApp with a bit about your business and what you need. We'll follow up to understand your goals, then walk you through a proposal and next steps tailored to your project.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do you offer one-time projects or ongoing retainers?</summary>
+        <p>Both. Some services, like a logo or a website, are natural one-time projects. Others, like social media management or digital marketing, work best as an ongoing monthly retainer so your brand stays active and consistent.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How much do your services cost?</summary>
+        <p>Pricing depends on the scope, service, and goals of each project, so we don't publish flat rates. Reach out with details about what you need, and we'll put together a custom quote.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What's your payment structure?</summary>
+        <p>Payment terms are agreed on a per-project basis and outlined before work begins, typically structured around a deposit followed by milestone or monthly payments. Full details are shared as part of our Terms of Service once a project starts.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How long does a typical project take?</summary>
+        <p>Timelines vary by service. A brand identity project might take a few weeks, while an ongoing social media or marketing retainer runs monthly. We'll give you a clear timeline as part of your proposal.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I see examples of your past work?</summary>
+        <p>Yes. Visit our Our Work page for real client projects across branding, social media, and campaigns, or check Reviews to hear directly from businesses we've worked with.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How can I contact Colart?</summary>
+        <p>You can reach us by email at info@colartdigitalmarketingagency.com, by phone or WhatsApp, or through the contact form on our Contact page.</p>
+      </details>
+    </div>
+  </div>
+</div>
+
 <script src="assets/js/main.js"></script>
+<script>
+/* ===== FAQ modal logic (self-contained, no dependency on work.js) ===== */
+(function() {
+  'use strict';
+
+  document.querySelectorAll('[data-modal-open]').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var id = btn.getAttribute('data-modal-open');
+      var modal = document.getElementById('modal-' + id);
+      if (!modal) return;
+      modal.classList.add('is-open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      var content = modal.querySelector('.work-modal-content');
+      if (content) content.scrollTop = 0;
+    });
+  });
+
+  document.querySelectorAll('[data-close-modal]').forEach(function(el) {
+    el.addEventListener('click', function() {
+      document.querySelectorAll('.work-modal.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+        m.setAttribute('aria-hidden', 'true');
+      });
+      document.body.style.overflow = '';
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.work-modal.is-open').forEach(function(m) {
+        m.classList.remove('is-open');
+        m.setAttribute('aria-hidden', 'true');
+      });
+      document.body.style.overflow = '';
+    }
+  });
+})();
+</script>
 </body>
 </html>
