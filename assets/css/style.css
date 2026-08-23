@@ -1702,6 +1702,17 @@ footer {
   background-repeat: no-repeat;
 }
 
+/* FAQ page hero — custom illustration; stronger wash since the colorful
+   question-mark shapes sit directly behind the headline text */
+.inner-hero.faq-hero-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .93), rgba(255, 255, 255, .93)),
+    url('../images/faq-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .inner-hero-content {
   max-width: 880px;
   margin: 0 auto;
@@ -2423,6 +2434,41 @@ footer {
 }
 .work-hero-btn-secondary i { font-size: 12px; transition: transform .3s; }
 .work-hero-btn-secondary:hover i { transform: translateY(4px); }
+
+.work-hero-portfolio-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.work-hero-portfolio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(255, 255, 255, .1);
+  border: 1.5px solid rgba(255, 255, 255, .28);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background .3s, border-color .3s, transform .3s;
+}
+.work-hero-portfolio-btn i {
+  font-size: 12px;
+  color: var(--yellow);
+}
+.work-hero-portfolio-btn:hover {
+  background: rgba(255, 255, 255, .2);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+@media (max-width: 600px) {
+  .work-hero-portfolio-btn { padding: 10px 16px; font-size: 12.5px; }
+}
 
 .work-hero-scroll {
   position: absolute;
