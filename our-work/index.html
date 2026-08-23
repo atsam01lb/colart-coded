@@ -32,6 +32,41 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../assets/css/style.css">
+  <!-- Organization / LocalBusiness Schema (AEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AdvertisingAgency",
+    "@id": "https://www.colartdigitalmarketingagency.com/#organization",
+    "name": "Colart Digital Marketing Agency",
+    "alternateName": "Colart",
+    "url": "https://www.colartdigitalmarketingagency.com/",
+    "logo": "https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png",
+    "image": "https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png",
+    "description": "Full-service digital marketing agency based in Lebanon, offering brand identity, social media management, digital marketing, media production, and website development for businesses across Lebanon, the GCC, and beyond.",
+    "slogan": "We create. You grow.",
+    "email": "info@colartdigitalmarketingagency.com",
+    "telephone": "+96170649423",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "LB"
+    },
+    "areaServed": [
+      { "@type": "Country", "name": "Lebanon" },
+      { "@type": "Place", "name": "GCC" }
+    ],
+    "sameAs": [
+      "https://facebook.com/colartdigitalmarketingagency",
+      "https://instagram.com/colartdigitalmarketingagency",
+      "https://threads.net/@colartdigitalmarketingagency",
+      "https://linkedin.com/company/colartdigitalmarketingagency",
+      "https://snapchat.com/add/colartlb",
+      "https://tiktok.com/@colartdigitalmarketing",
+      "https://youtube.com/@colartdigitalmarketingagency",
+      "https://t.me/colartdigitalmarketingagency"
+    ]
+  }
+  </script>
 </head>
 <body>
 <!-- ============ HEADER ============ -->
@@ -66,56 +101,45 @@
     <a href="../contact/" class="mobile-cta">Get a Free Quote</a>
   </nav>
 </div>
-<!-- ============ HERO ============ -->
-<section class="work-hero">
-  <div class="work-hero-bg"></div>
-  <div class="work-hero-overlay"></div>
-  <div class="work-hero-dot dot-a"></div>
-  <div class="work-hero-dot dot-b"></div>
-  <div class="work-hero-dot dot-c"></div>
-  <div class="container work-hero-container">
-    <div class="work-hero-content fade-in">
-      <div class="work-hero-eyebrow">
-        <span class="work-hero-eyebrow-dot"></span>
-        <span>OUR WORK · PORTFOLIO</span>
-      </div>
-      <h1 class="work-hero-title">
-        Where <span class="gradient-text">creative</span> ideas become brand reality.
-      </h1>
-      <p class="work-hero-subtitle">
-        Six categories of work crafted for 99+ brands across Lebanon, the GCC, and beyond. From full brand systems to social content, packaging, and beyond.
-      </p>
-      <div class="work-hero-portfolio-nav">
-        <a href="#brand-identity" class="work-hero-portfolio-btn">
+<!-- ============ INNER PAGE HERO ============ -->
+<section class="inner-hero our-work-hero-bg">
+  <div class="container">
+    <div class="inner-hero-content">
+      <p class="eyebrow reveal">Our Work</p>
+      <h1 class="reveal d1">Where <span class="magenta">Creative Ideas</span> Become Brand Reality</h1>
+      <p class="reveal d2">Six categories of work crafted for 99+ brands across Lebanon, the GCC, and beyond. From full brand systems to social content, packaging, and beyond.</p>
+      <div class="anchor-pills reveal d3">
+        <a href="#brand-identity" class="anchor-pill">
           <i class="fa-solid fa-palette"></i>
           <span>Brand Identity</span>
         </a>
-        <a href="#logos" class="work-hero-portfolio-btn">
+        <a href="#logos" class="anchor-pill">
           <i class="fa-solid fa-shapes"></i>
           <span>Logos</span>
         </a>
-        <a href="#social-media" class="work-hero-portfolio-btn">
+        <a href="#social-media" class="anchor-pill">
           <i class="fa-solid fa-share-nodes"></i>
           <span>Social Media</span>
         </a>
-        <a href="#carousels" class="work-hero-portfolio-btn">
+        <a href="#carousels" class="anchor-pill">
           <i class="fa-solid fa-images"></i>
           <span>Carousels</span>
         </a>
-        <a href="#menus" class="work-hero-portfolio-btn">
+        <a href="#menus" class="anchor-pill">
           <i class="fa-solid fa-utensils"></i>
           <span>Menus</span>
         </a>
-        <a href="#websites" class="work-hero-portfolio-btn">
+        <a href="#websites" class="anchor-pill">
           <i class="fa-solid fa-display"></i>
           <span>Website Previews</span>
         </a>
       </div>
     </div>
   </div>
-  <a href="#brand-identity" class="work-hero-scroll" aria-label="Scroll to content">
-    <i class="fa-solid fa-chevron-down"></i>
-  </a>
+  <!-- Decorative floating dots -->
+  <div class="inner-hero-dot dot-a"></div>
+  <div class="inner-hero-dot dot-b"></div>
+  <div class="inner-hero-dot dot-c"></div>
 </section>
 <!-- ============ SECTION 1: BRAND IDENTITY SYSTEMS ============ -->
 <section class="work-section" id="brand-identity">
