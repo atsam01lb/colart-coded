@@ -1,5 +1,5 @@
 /* ===========================================
-   PIXEL — Colart's AI Marketing Strategist
+   PIXEL — Colart's AI Assistant
    Static, client-side conversation engine.
    No backend, no LLM API, no CRM — everything here is rule-based
    (branching questions + templated recommendations), and every
@@ -106,7 +106,7 @@
     { label: "💰 Get a proposal", value: "goal:proposal" }
   ];
 
-  var GREETING = "Hey 👋 I'm Pixel, Colart's AI marketing strategist. Tell me what you're trying to achieve and I'll help you find your biggest opportunities — or just ask me a direct question.";
+  var GREETING = "Hey 👋 I'm Pixel, Colart's AI Assistant. Tell me what you're trying to achieve and I'll help you find your biggest opportunities — or just ask me a direct question.";
   var GREETING_REPLY = "Hey again! Pick one of these to get started, or tell me what's on your mind:";
   var HELP_REPLY = "Of course — tap “Chat with an Agent on WhatsApp” below and I'll pass along everything we've covered so far so our team can pick up right where we left off.";
   var FALLBACK = "I want to make sure I point you the right way. Are you mainly trying to get more customers, improve your brand, or improve your digital presence? Or pick an option below:";
