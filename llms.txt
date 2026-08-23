@@ -1,0 +1,20 @@
+# Colart Digital Marketing Agency
+
+> Colart is a full-service digital marketing agency based in Lebanon, offering brand identity, social media management, digital marketing, media production, and website development for businesses across Lebanon, the GCC, and beyond. "We create. You grow."
+
+## Company
+
+- [Home](https://www.colartdigitalmarketingagency.com/): Overview of Colart and its services, work, and clients.
+- [Services](https://www.colartdigitalmarketingagency.com/services/): Brand identity, social media management, digital marketing, media production, and website development.
+- [Our Work](https://www.colartdigitalmarketingagency.com/our-work/): Portfolio spanning brand identity, logos, social media, carousels, menus, and website previews for 99+ brands.
+- [Team](https://www.colartdigitalmarketingagency.com/team/): The people behind Colart.
+- [Collaborations](https://www.colartdigitalmarketingagency.com/collaboration/): Agency partners and valuable clients Colart works with.
+- [Reviews](https://www.colartdigitalmarketingagency.com/reviews/): Client testimonials and feedback.
+- [FAQ](https://www.colartdigitalmarketingagency.com/faq/): Answers to common questions about Colart's services, pricing, process, and policies.
+- [Contact](https://www.colartdigitalmarketingagency.com/contact/): Ways to get in touch and start a project.
+
+## Contact
+
+- Email: info@colartdigitalmarketingagency.com
+- Phone: +961 70 649 423 / +961 81 042 512
+- Location: Lebanon, serving clients across the GCC and beyond
