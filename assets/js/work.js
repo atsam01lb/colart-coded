@@ -13,6 +13,16 @@
     });
   });
 
+  // ===== Open modals when clicking results stat cards =====
+  document.querySelectorAll('.stat-card').forEach(function(card) {
+    card.addEventListener('click', function(e) {
+      if (e.target.closest('a')) return;
+      var brand = card.getAttribute('data-brand');
+      if (!brand) return;
+      openModal('modal-' + brand);
+    });
+  });
+
   // ===== Open "View All" modal buttons =====
   document.querySelectorAll('.btn-view-all').forEach(function(btn) {
     btn.addEventListener('click', function() {
