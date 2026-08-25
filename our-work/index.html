@@ -1268,6 +1268,21 @@
     © 2026 Colart Digital Marketing Agency. All Rights Reserved.
   </div>
 </footer>
+<!-- ============ PHOTO LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <span class="lightbox-hint">Swipe or use arrow keys to browse. Double-tap or scroll to zoom.</span>
+  <button class="lightbox-close" data-lightbox-close aria-label="Close photo viewer" type="button"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous photo" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next photo" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lightbox-stage" id="lightboxStage">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" draggable="false" />
+  </div>
+  <div class="lightbox-footer">
+    <span class="lightbox-caption" id="lightboxCaption"></span>
+    <span class="lightbox-counter" id="lightboxCounter"></span>
+  </div>
+</div>
 <!-- WhatsApp floating button -->
 <!-- ============ WEBSITE CHAT ASSISTANT ============ -->
 <div class="chatbot-widget" id="chatbotWidget">
