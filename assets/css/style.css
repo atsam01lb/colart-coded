@@ -2554,6 +2554,33 @@ footer {
 .service-cta i { transition: transform .3s; font-size: 12px; }
 .service-cta:hover i { transform: translateX(4px); }
 
+.modal-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.service-cta-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--purple);
+  padding: 13px 28px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .02em;
+  border: 2px solid var(--purple);
+  transition: background .3s, color .3s, transform .3s;
+}
+.service-cta-outline:hover {
+  background: var(--purple);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.service-cta-outline i { transition: transform .3s; font-size: 12px; }
+.service-cta-outline:hover i { transform: translateX(4px); }
+
 /* ===========================================
    LAUNCHING SOON PAGE
 =========================================== */
