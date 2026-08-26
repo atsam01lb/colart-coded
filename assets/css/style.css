@@ -2821,6 +2821,28 @@ footer {
   .work-section { padding: 70px 24px; }
 }
 
+/* Groups a section's cards into labeled sub-categories (e.g. Printable vs Digital menus) */
+.work-group + .work-group { margin-top: 56px; }
+.work-group-head { margin-bottom: 24px; }
+.work-group-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: var(--purple);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.work-group-label i { font-size: 13px; }
+.work-group-head p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin-top: 8px;
+  max-width: 620px;
+}
+
 /* ===========================================
    SECTION 1 — BRAND IDENTITY GRID
 =========================================== */
@@ -3277,6 +3299,46 @@ footer {
 /* On the very narrow menu cards, scale down the headline a touch more */
 @media (min-width: 481px) and (max-width: 1100px) {
   #menus .brand-card-overlay h3 { font-size: 15px; }
+}
+
+/* Digital Menus sub-group: logo/hero showcase, not a cropped story cover */
+#menus .digital-menu-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px) { #menus .digital-menu-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { #menus .digital-menu-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
+
+#menus .digital-menu-card.brand-card {
+  aspect-ratio: 4 / 3;
+  text-decoration: none;
+  display: block;
+}
+#menus .digital-menu-card .brand-card-img {
+  background: var(--bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+}
+#menus .digital-menu-card .brand-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+}
+.digital-menu-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 2;
+  background: rgba(255, 255, 255, .92);
+  color: var(--ink);
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  padding: 5px 11px;
+  border-radius: 999px;
 }
 
 /* Carousel modal gallery — 4:5 portrait slides */
