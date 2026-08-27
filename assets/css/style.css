@@ -1353,6 +1353,45 @@ footer {
 }
 
 /* ===========================================
+   TRUSTED BY — LOGO WALL (collaborations page)
+=========================================== */
+.logo-wall {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  gap: 14px;
+}
+@media (max-width: 900px) { .logo-wall { grid-template-columns: repeat(9, 1fr); gap: 12px; } }
+@media (max-width: 560px) { .logo-wall { grid-template-columns: repeat(7, 1fr); gap: 8px; } }
+
+.logo-wall-item {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px;
+  transition: border-color .3s, box-shadow .3s, transform .3s;
+}
+.logo-wall-item:hover {
+  border-color: rgba(100, 40, 120, .25);
+  box-shadow: 0 8px 18px rgba(100, 40, 120, .1);
+  transform: translateY(-2px);
+}
+.logo-wall-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.logo-wall-item.dark-logo {
+  background: linear-gradient(135deg, #f5f5f7 0%, #e8e8ec 100%);
+}
+@media (max-width: 560px) {
+  .logo-wall-item { padding: 5px; border-radius: 7px; }
+}
+
+/* ===========================================
    7. SECTION 3 — WHO WE HELP (REDESIGNED)
 =========================================== */
 .who-section {
