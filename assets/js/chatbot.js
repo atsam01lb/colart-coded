@@ -86,6 +86,56 @@
       keywords: ["contact", "email address", "phone number", "reach you", "get in touch", "call you"]
     },
     {
+      q: "What is digital menu hosting?",
+      a: "Colart designs, hosts, and maintains digital menus at their own web address, so guests can scan a QR code and browse your full menu on any phone, no app or download needed.",
+      keywords: ["digital menu hosting", "menu hosting", "what is digital menu", "online menu", "digital menu", "menu"]
+    },
+    {
+      q: "How does a QR code menu work?",
+      a: "You place a QR code on your tables, counter, or signage. Guests scan it with their phone camera and it opens your full menu instantly in their browser, no app or download required.",
+      keywords: ["qr code menu", "how does a qr menu work", "scan the menu", "qr code", "scan for menu", "menu"]
+    },
+    {
+      q: "Where is my digital menu hosted?",
+      a: "Your digital menu lives at its own web address at menus.colartdigitalmarketingagency.com, hosted and managed by Colart.",
+      keywords: ["where is my menu hosted", "menu website", "menu address", "menus.colartdigitalmarketingagency", "menu domain", "menu url", "menu"]
+    },
+    {
+      q: "Do guests need an app to view the menu?",
+      a: "No. Guests browse your full menu straight from their phone's browser right after scanning the QR code, no app or download needed on their end.",
+      keywords: ["need an app for menu", "download app menu", "app required menu", "install app menu", "need an app", "download the app", "require an app", "app for the menu", "menu"]
+    },
+    {
+      q: "Can I update my digital menu after it's live?",
+      a: "Yes. Prices, items, and seasonal specials can all be updated on your digital menu without reprinting a single physical menu.",
+      keywords: ["update menu", "change menu", "edit menu", "update menu prices", "change menu prices", "seasonal menu", "menu prices", "update my menu", "change my menu", "menu"]
+    },
+    {
+      q: "Do you also design printable menus?",
+      a: "Yes. Alongside digital menu hosting, Colart also designs printable and Instagram-highlight-format menus for businesses that want both a physical and digital presence.",
+      keywords: ["printable menu", "print menu", "physical menu", "paper menu", "instagram menu", "highlight menu", "menu"]
+    },
+    {
+      q: "Can I see examples of digital menus Colart has built?",
+      a: "Yes. Visit our Our Work page to see digital menu projects, or check menus.colartdigitalmarketingagency.com directly to browse real live menus we host.",
+      keywords: ["examples of digital menu", "see a digital menu", "sample menu", "menu examples", "menu portfolio", "menu case study", "examples of your", "see your menus", "see digital menus", "menu"]
+    },
+    {
+      q: "Which businesses can get a digital menu?",
+      a: "Digital menu hosting works well for restaurants, cafés, and similar businesses that want guests to browse their offerings from a phone instead of a printed menu.",
+      keywords: ["restaurant menu", "cafe menu", "coffee shop menu", "can i get a digital menu", "who is digital menu for", "which businesses", "what businesses", "businesses can get", "can any restaurant", "can any cafe", "can my restaurant", "can my cafe", "menu"]
+    },
+    {
+      q: "How much does a digital menu cost?",
+      a: "Digital menu hosting is scoped to your business and menu size, so I don't want to give you an inaccurate number. Tell me a bit about your menu and I can help figure out the right scope, then connect you with the team for a real proposal.",
+      keywords: ["digital menu cost", "menu price", "how much is a digital menu", "menu pricing", "menu hosting cost", "menu"]
+    },
+    {
+      q: "How do I get a digital menu made?",
+      a: "Reach out through our Contact page or WhatsApp with a bit about your menu and business, and we'll walk you through getting your digital menu designed, hosted, and live at its own address.",
+      keywords: ["get a digital menu", "start a menu project", "order a menu", "menu project", "make me a menu", "build my menu", "menu"]
+    },
+    {
       q: "Competitor comparison",
       a: "It depends on what you're looking for. If you tell me your priorities, I can help you think through what to evaluate — strategy, creative, performance, industry experience, regional reach, and reporting — rather than just taking my word for it.",
       keywords: ["better than", "vs ", "versus", "compare you to", "other agenc", "competitor"]
