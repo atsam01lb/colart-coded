@@ -2952,6 +2952,64 @@ footer {
 }
 .brand-card:hover .brand-card-cta i { transform: translateX(4px); }
 
+/* No-logo brand tiles (solid gradient + icon, used when no artwork is available) */
+.brand-card-noimg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+}
+.brand-card-noimg-icon {
+  color: rgba(255, 255, 255, .3);
+  font-size: 88px;
+  line-height: 1;
+  transition: transform .6s cubic-bezier(.7, 0, .2, 1);
+}
+.brand-card-noimg:hover .brand-card-noimg-icon { transform: scale(1.08) rotate(-3deg); }
+.brand-card-noimg .brand-card-overlay {
+  background: linear-gradient(to top, rgba(26, 20, 36, .88) 0%, rgba(26, 20, 36, .25) 65%, transparent 100%);
+}
+
+/* Blurred "see all" teaser tile */
+.brand-card-blur-cta .brand-card-img img {
+  filter: blur(11px) saturate(1.05);
+  transform: scale(1.18);
+}
+.brand-card-blur-cta:hover .brand-card-img img { transform: scale(1.24); }
+.brand-card-blur-tint {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(100, 40, 120, .78) 0%, rgba(200, 20, 120, .68) 100%);
+}
+.brand-card-center-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  text-align: center;
+  padding: 30px;
+  color: #fff;
+}
+.brand-card-center-content > i {
+  font-size: 30px;
+  color: var(--yellow);
+}
+.brand-card-center-content h3 {
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+.brand-card-center-content .brand-card-cta {
+  opacity: 1;
+  transform: none;
+  position: static;
+}
+.brand-card-blur-cta:hover .brand-card-center-content .brand-card-cta { gap: 11px; }
+
 /* ===========================================
    SECTION 2 — LOGO PREVIEW GRID
 =========================================== */
