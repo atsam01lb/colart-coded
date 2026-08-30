@@ -2952,24 +2952,6 @@ footer {
 }
 .brand-card:hover .brand-card-cta i { transform: translateX(4px); }
 
-/* No-logo brand tiles (solid gradient + icon, used when no artwork is available) */
-.brand-card-noimg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
-}
-.brand-card-noimg-icon {
-  color: rgba(255, 255, 255, .3);
-  font-size: 88px;
-  line-height: 1;
-  transition: transform .6s cubic-bezier(.7, 0, .2, 1);
-}
-.brand-card-noimg:hover .brand-card-noimg-icon { transform: scale(1.08) rotate(-3deg); }
-.brand-card-noimg .brand-card-overlay {
-  background: linear-gradient(to top, rgba(26, 20, 36, .88) 0%, rgba(26, 20, 36, .25) 65%, transparent 100%);
-}
-
 /* Blurred "see all" teaser tile */
 .brand-card-blur-cta .brand-card-img img {
   filter: blur(11px) saturate(1.05);
