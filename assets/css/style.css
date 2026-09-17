@@ -1637,6 +1637,9 @@ footer {
   letter-spacing: .02em;
   transition: transform .4s cubic-bezier(.2, .7, .2, 1), box-shadow .4s cubic-bezier(.2, .7, .2, 1);
   box-shadow: 0 4px 16px rgba(26, 20, 36, .1);
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 .btn-pill-gradient i { font-size: 12px; transition: transform .3s; }
 .btn-pill-gradient:hover {
