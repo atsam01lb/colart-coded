@@ -1468,6 +1468,7 @@ footer {
   line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 50px;
 }
 .who-card p {
   font-size: 14.5px;
@@ -1478,6 +1479,7 @@ footer {
   line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  min-height: 93px;
 }
 .who-card {
   cursor: pointer;
