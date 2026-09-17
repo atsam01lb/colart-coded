@@ -1463,11 +1463,21 @@ footer {
   line-height: 1.2;
   color: var(--ink);
   margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .who-card p {
   font-size: 14.5px;
   line-height: 1.6;
   color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .who-card {
   cursor: pointer;
