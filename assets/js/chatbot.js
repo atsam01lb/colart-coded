@@ -108,7 +108,7 @@
     {
       q: "Can I update my digital menu after it's live?",
       a: "Yes. Prices, items, and seasonal specials can all be updated on your digital menu without reprinting a single physical menu.",
-      keywords: ["update menu", "change menu", "edit menu", "update menu prices", "change menu prices", "seasonal menu", "menu prices", "update my menu", "change my menu", "menu"]
+      keywords: ["update menu", "change menu", "edit menu", "update menu prices", "change menu prices", "seasonal menu", "menu prices", "update my menu", "change my menu", "update my digital menu", "menu"]
     },
     {
       q: "Do you also design printable menus?",
@@ -134,6 +134,71 @@
       q: "How do I get a digital menu made?",
       a: "Reach out through our Contact page or WhatsApp with a bit about your menu and business, and we'll walk you through getting your digital menu designed, hosted, and live at its own address.",
       keywords: ["get a digital menu", "start a menu project", "order a menu", "menu project", "make me a menu", "build my menu", "menu"]
+    },
+    {
+      q: "What is Price Lists by Colart?",
+      a: "Price Lists by Colart is a digital price list service, an alternative to printed pricing. Your list lives at its own web address, shared with customers through a link or a QR code, and is hosted and kept current by Colart, no reprinting, no outdated prices.",
+      keywords: ["price lists by colart", "digital price list", "what is price lists", "online price list", "pricelists.colartdigitalmarketingagency", "price list"]
+    },
+    {
+      q: "How do customers see my digital price list?",
+      a: "Customers open it from a link or by scanning a QR code, right in their phone's browser. No app or download needed on their end.",
+      keywords: ["see my price list", "scan price list", "qr code price list", "how do customers see", "price list"]
+    },
+    {
+      q: "Can I update my digital price list later?",
+      a: "Yes. Prices and items can be updated anytime without reprinting a single physical price list.",
+      keywords: ["update price list", "change prices", "edit price list", "update my prices", "update my price list", "price list"]
+    },
+    {
+      q: "Which businesses can get a digital price list?",
+      a: "It's currently used by beauty and grooming businesses like salons and grooming lounges, though the format works for any business that wants to share pricing without printed materials.",
+      keywords: ["salon price list", "grooming price list", "beauty price list", "which businesses price list", "can i get a price list", "which businesses", "businesses can get", "price list"]
+    },
+    {
+      q: "How much does a digital price list cost?",
+      a: "Price list hosting is scoped to your business and how many items or services you offer, so I don't want to give you an inaccurate number. Tell me a bit about what you need and I can help figure out the right scope, then connect you with the team for a real proposal.",
+      keywords: ["price list cost", "how much is a price list", "price list pricing", "price list hosting cost", "digital price list cost", "price list"]
+    },
+    {
+      q: "How do I get a digital price list made?",
+      a: "Reach out through our Contact page or WhatsApp with a bit about your business and pricing, and we'll walk you through getting your digital price list designed, hosted, and live at its own address.",
+      keywords: ["get a price list", "start a price list project", "order a price list", "make me a price list", "build my price list", "price list"]
+    },
+    {
+      q: "What is Requests by Colart?",
+      a: "Requests by Colart is a karaoke song request platform, a dedicated hub where karaoke bars and entertainment venues keep their song requests, digital menus, promos, and guest experience running smoothly, all in one branded page.",
+      keywords: ["requests by colart", "karaoke request system", "song request platform", "what is requests", "requests.colartdigitalmarketingagency", "karaoke"]
+    },
+    {
+      q: "How does the karaoke song request system work?",
+      a: "Guests open your venue's branded page on their phone, submit a song request, and it lands straight in the venue's WhatsApp, no app to download. The whole thing takes guests under 15 seconds.",
+      keywords: ["how does karaoke requests work", "song request whatsapp", "how do song requests work", "karaoke", "song request"]
+    },
+    {
+      q: "Do guests need an app for song requests?",
+      a: "No. Guests use a mobile web page, no app download or account creation required on their end.",
+      keywords: ["need an app for karaoke", "download app song request", "app required karaoke", "need an app for song requests", "karaoke", "song request"]
+    },
+    {
+      q: "Who receives the song requests?",
+      a: "Requests go straight to the venue's WhatsApp, so staff or the DJ get them immediately without checking a separate dashboard.",
+      keywords: ["who receives song requests", "requests go where", "dj get requests", "venue whatsapp requests", "who receives", "karaoke", "song request"]
+    },
+    {
+      q: "Is the karaoke request page branded to my venue?",
+      a: "Yes. Each venue gets a fully branded, customized page that reflects its own colors and branding, not a generic template.",
+      keywords: ["branded karaoke page", "custom karaoke page", "venue branding requests", "request page branded", "branded to my venue", "karaoke"]
+    },
+    {
+      q: "Which businesses can use Requests by Colart?",
+      a: "It's built for karaoke bars and entertainment venues. The platform can also grow with a venue to add digital menus, promos, and additional request pages as needed.",
+      keywords: ["karaoke bars", "entertainment venues", "which businesses karaoke", "can i get requests by colart", "which businesses can use", "karaoke", "song request"]
+    },
+    {
+      q: "How do I get Requests set up for my venue?",
+      a: "Reach out through our Contact page or WhatsApp with a bit about your venue, and we'll walk you through getting your branded song request page designed, hosted, and live.",
+      keywords: ["get requests by colart", "set up karaoke requests", "start a karaoke project", "order requests by colart", "get requests set up", "set up for my venue", "karaoke", "song request"]
     },
     {
       q: "Competitor comparison",
