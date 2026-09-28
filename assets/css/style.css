@@ -4883,3 +4883,72 @@ footer {
 .modal-social-cell img {
   cursor: zoom-in;
 }
+
+/* ===========================================
+   SHARED — BREADCRUMBS
+   Used across dedicated service / location / product pages
+=========================================== */
+.breadcrumbs { padding: 18px 36px 0; background: var(--bg); }
+.breadcrumbs .container { max-width: 1300px; margin: 0 auto; }
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  font-size: 13px;
+  color: var(--muted);
+}
+.breadcrumbs li { display: flex; align-items: center; gap: 6px; }
+.breadcrumbs li:not(:last-child)::after { content: "/"; margin-left: 6px; color: var(--line); }
+.breadcrumbs a { color: var(--muted); text-decoration: none; transition: color .2s; }
+.breadcrumbs a:hover { color: var(--magenta); }
+.breadcrumbs li[aria-current="page"] { color: var(--ink); font-weight: 600; }
+@media (max-width: 768px) { .breadcrumbs { padding: 14px 24px 0; } }
+
+/* ===========================================
+   SHARED — LOCATION CHIPS
+   Used across dedicated service / location / product pages
+=========================================== */
+.location-chips-section { padding: 60px 36px; background: var(--bg-soft); }
+.location-chips-section .container { max-width: 1100px; margin: 0 auto; text-align: center; }
+.location-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 28px; }
+.location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.location-chip i { color: var(--magenta); font-size: 13px; }
+@media (max-width: 768px) { .location-chips-section { padding: 50px 24px; } }
+
+/* ===========================================
+   SHARED — ICON VISUAL PANEL
+   Drop-in replacement for .service-detail-visual img
+   when a page has no dedicated photo yet
+=========================================== */
+.service-detail-visual-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+  position: relative;
+}
+.service-detail-visual-icon i { font-size: 96px; color: rgba(255, 255, 255, .92); }
+
+/* ===========================================
+   SHARED — RELATED LINKS ROW
+   Plain-language cross-links between services/locations/products
+=========================================== */
+.related-links-section { padding: 70px 36px; background: #fff; }
+.related-links-section .container { max-width: 1100px; margin: 0 auto; text-align: center; }
+.related-links-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 28px; }
+@media (max-width: 768px) { .related-links-section { padding: 50px 24px; } }
