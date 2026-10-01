@@ -138,17 +138,96 @@
   <a href="contact/" class="nav-cta">Start a project →</a>
   <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
 </header>
-<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+<div class="mobile-menu mobile-menu-detailed" id="mobileMenu" aria-hidden="true">
   <nav>
-    <a href="./">Home</a>
-    <a href="services/">Services</a>
-    <a href="products/">Products</a>
-    <a href="our-work/">Our Work</a>
-    <a href="team/">Team</a>
-    <a href="collaboration/">Collaboration</a>
-    <a href="reviews/">Reviews</a>
-    <a href="faq/">FAQ</a>
-    <a href="contact/">Contact</a>
+    <div class="mobile-nav-item">
+      <a href="./" class="mobile-nav-link active">Home</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Home sections">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="#welcome">Welcome</a>
+        <a href="#who-we-help">Who We Help</a>
+        <a href="#services">Services</a>
+        <a href="#products">Products</a>
+        <a href="#our-work-teaser">Our Work</a>
+        <a href="#why-colart">Why Colart</a>
+        <a href="#how-we-work">How We Work</a>
+        <a href="#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="products/" class="mobile-nav-link">Products</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Products sections">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="products/#overview">Overview</a>
+        <a href="products/#the-products">The Products</a>
+        <a href="products/#where-we-work">Where We Work</a>
+        <a href="products/#related-services">Related Services</a>
+        <a href="products/#faq">FAQ</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="services/" class="mobile-nav-link">Services</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Services sections">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="services/#brand-identity">Brand Identity</a>
+        <a href="services/#social-media">Social Media Management</a>
+        <a href="services/#digital-marketing">Digital Marketing</a>
+        <a href="services/#media-production">Media Production</a>
+        <a href="services/#website-development">Website Development</a>
+        <a href="services/#menu-hosting">Digital Menu Hosting</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="our-work/" class="mobile-nav-link">Our Work</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Our Work sections">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="our-work/#branding">Branding</a>
+        <a href="our-work/#logos">Logos</a>
+        <a href="our-work/#social-media">Social Media</a>
+        <a href="our-work/#carousels">Carousels</a>
+        <a href="our-work/#menus">Menus</a>
+        <a href="our-work/#websites">Website Previews</a>
+        <a href="our-work/#results">Results</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="team/" class="mobile-nav-link">Team</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Team members">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="team/#team-samuel">Samuel El Hindy</a>
+        <a href="team/#team-luna">Luna Mouchaham</a>
+        <a href="team/#team-jad-bj">Jad Bou Jaoude</a>
+        <a href="team/#team-abdulrahman">Abdulrahman Ajaj</a>
+        <a href="team/#team-jeanpaul">Jean Paul Haswany</a>
+        <a href="team/#team-jad-baroudy">Jad Baroudy</a>
+        <a href="team/#team-georges">Georges Mounzer</a>
+        <a href="team/#team-mohamad">Mohamad Charkieh</a>
+        <a href="team/#team-maguy">Maguy Al Massry</a>
+        <a href="team/#team-pixel-ai">Pixel</a>
+      </div>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="collaboration/" class="mobile-nav-link">Collaboration</a>
+      <button type="button" class="mobile-nav-expand" aria-expanded="false" aria-label="Toggle Collaboration sections">
+        <i class="fa-solid fa-chevron-down"></i>
+      </button>
+      <div class="mobile-submenu">
+        <a href="collaboration/#collaborations">Collaborations</a>
+        <a href="collaboration/#valuable-clients">Valuable Clients</a>
+      </div>
+    </div>
+    <a href="reviews/" class="mobile-nav-flat">Reviews</a>
+    <a href="contact/" class="mobile-nav-flat">Contact</a>
     <a href="contact/" class="mobile-cta">Start a project →</a>
   </nav>
 </div>
@@ -193,7 +272,7 @@
   </div>
 </section>
 <!-- ============ SECTION 2 - WELCOME ============ -->
-<section class="welcome-section">
+<section class="welcome-section" id="welcome">
   <div class="container">
     <div class="welcome-content">
       <div class="welcome-badge fade-in">
@@ -209,7 +288,7 @@
   <div class="welcome-dot dot-b"></div>
 </section>
 <!-- ============ SECTION 3 - WHO WE HELP ============ -->
-<section class="who-section">
+<section class="who-section" id="who-we-help">
   <div class="container">
     <div class="section-head fade-in">
       <span class="section-eyebrow-pill">Who We Help</span>
@@ -471,34 +550,34 @@
       <h2>Digital Products by <span class="magenta">Colart</span></h2>
       <p>Beyond agency services, Colart builds and hosts its own digital products, ready-made tools for businesses in Tripoli, Beirut, Jbeil, Batroun, and beyond that want a modern digital presence without building it from scratch.</p>
     </div>
-    <div class="who-grid fade-in-stagger">
-      <article class="who-card" style="text-align:left;">
+    <div class="who-grid fade-in-stagger products-grid-3">
+      <article class="who-card">
         <div class="who-card-icon"><i class="fa-solid fa-qrcode"></i></div>
         <h3>Menus by Colart</h3>
         <p>Digital, QR-code menus for restaurants, cafes, bakeries, and hospitality businesses, no app or download needed for guests.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
+        <div class="modal-cta-row" style="margin-top:18px; justify-content:center;">
           <a href="products/digital-menus/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
             Learn More
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
-      <article class="who-card" style="text-align:left;">
+      <article class="who-card">
         <div class="who-card-icon"><i class="fa-solid fa-tags"></i></div>
         <h3>Price Lists by Colart</h3>
         <p>Digital price lists for salons, service businesses, and retailers, shared through a link or QR code instead of printed pricing.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
+        <div class="modal-cta-row" style="margin-top:18px; justify-content:center;">
           <a href="products/digital-price-lists/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
             Learn More
             <i class="fa-solid fa-arrow-right"></i>
           </a>
         </div>
       </article>
-      <article class="who-card" style="text-align:left;">
+      <article class="who-card">
         <div class="who-card-icon"><i class="fa-solid fa-music"></i></div>
         <h3>Requests by Colart</h3>
         <p>A branded song-request page for karaoke bars and entertainment venues, with requests landing straight in the venue's WhatsApp.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
+        <div class="modal-cta-row" style="margin-top:18px; justify-content:center;">
           <a href="products/requests/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
             Learn More
             <i class="fa-solid fa-arrow-right"></i>
@@ -515,7 +594,7 @@
   </div>
 </section>
 <!-- ============ SECTION 5 - OUR WORK ============ -->
-<section class="our-work-section">
+<section class="our-work-section" id="our-work-teaser">
   <div class="container">
     <div class="work-card fade-in">
       <div class="work-card-content">
@@ -540,7 +619,7 @@
   </div>
 </section>
 <!-- ============ SECTION 6 - WHY COLART ============ -->
-<section class="why-section">
+<section class="why-section" id="why-colart">
   <div class="container">
     <div class="section-head fade-in">
       <span class="section-eyebrow-pill">Why Colart</span>
@@ -572,7 +651,7 @@
   </div>
 </section>
 <!-- ============ SECTION 7 - HOW WE WORK ============ -->
-<section class="how-section">
+<section class="how-section" id="how-we-work">
   <div class="container">
     <div class="section-head fade-in">
       <span class="section-eyebrow-pill">How We Work</span>
