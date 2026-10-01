@@ -5080,6 +5080,23 @@ footer {
 @media (max-width: 480px) { .who-grid.products-grid-4 { grid-template-columns: 1fr; max-width: 100%; } }
 
 /* ===========================================
+   404 PAGE - large gradient numeral above the
+   usual inner-hero heading/copy.
+=========================================== */
+.inner-hero p.error-404-number {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: clamp(90px, 18vw, 220px);
+  line-height: 1;
+  background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0 0 6px;
+  max-width: none;
+}
+
+/* ===========================================
    CLICKABLE SUBSERVICE CARD (external-link variant)
    Used where a "Selected Work" subservice-card
    links out to a real external site, e.g. the
