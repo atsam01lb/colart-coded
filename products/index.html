@@ -256,7 +256,7 @@
   </div>
 </nav>
 <!-- ============ HERO ============ -->
-<section class="inner-hero services-hero-bg">
+<section class="inner-hero products-hero-bg">
   <div class="container">
     <div class="inner-hero-content">
       <p class="eyebrow reveal">Colart Products</p>
@@ -285,55 +285,92 @@
       <h2>Three Products, <span class="magenta">One Team Behind Them</span></h2>
       <p>Each product is its own platform, built and hosted by Colart for a specific kind of business.</p>
     </div>
-    <div class="who-grid fade-in-stagger">
-      <article class="who-card" style="text-align:left;">
+    <div class="who-grid fade-in-stagger products-grid-3">
+      <article class="who-card" data-modal-target="modal-product-menus" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="who-card-icon"><i class="fa-solid fa-qrcode"></i></div>
         <h3>Menus by Colart</h3>
         <p>Digital, QR-code menus for restaurants, cafes, bakeries, and hospitality businesses, no app or download needed for guests.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
-          <a href="digital-menus/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="https://menus.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Visit Platform
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+        <div class="who-card-more">View Details <i class="fa-solid fa-arrow-right"></i></div>
       </article>
-      <article class="who-card" style="text-align:left;">
+      <article class="who-card" data-modal-target="modal-product-price-lists" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="who-card-icon"><i class="fa-solid fa-tags"></i></div>
         <h3>Price Lists by Colart</h3>
         <p>Digital price lists for salons, service businesses, and retailers, shared through a link or QR code instead of printed pricing.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
-          <a href="digital-price-lists/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="https://pricelists.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Visit Platform
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+        <div class="who-card-more">View Details <i class="fa-solid fa-arrow-right"></i></div>
       </article>
-      <article class="who-card" style="text-align:left;">
+      <article class="who-card" data-modal-target="modal-product-requests" role="button" tabindex="0" aria-haspopup="dialog">
         <div class="who-card-icon"><i class="fa-solid fa-music"></i></div>
         <h3>Requests by Colart</h3>
         <p>A branded song-request page for karaoke bars and entertainment venues, with requests landing straight in the venue's WhatsApp.</p>
-        <div class="modal-cta-row" style="margin-top:18px;">
-          <a href="requests/" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Learn More
-            <i class="fa-solid fa-arrow-right"></i>
-          </a>
-          <a href="https://requests.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta-outline" style="padding:10px 18px; font-size:13px;">
-            Visit Platform
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-          </a>
-        </div>
+        <div class="who-card-more">View Details <i class="fa-solid fa-arrow-right"></i></div>
       </article>
     </div>
   </div>
 </section>
+<!-- ============ PRODUCT MODALS ============ -->
+<div class="work-modal" id="modal-product-menus" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-product-menus-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">The Products</span>
+      <h3 id="modal-product-menus-title">Menus by Colart</h3>
+      <p>Menus by Colart is a digital, QR-code menu platform for restaurants, cafes, and bakeries. Each menu is designed, hosted, and kept up to date by Colart at its own web address, so guests can scan and browse on any phone.</p>
+    </div>
+    <div class="modal-cta-row" style="justify-content:center;">
+      <a href="digital-menus/" class="service-cta-outline">
+        Learn More
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="https://menus.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta">
+        Visit Platform
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-product-price-lists" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-product-price-lists-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">The Products</span>
+      <h3 id="modal-product-price-lists-title">Price Lists by Colart</h3>
+      <p>Price Lists by Colart is a digital price list service for businesses like salons, grooming lounges, and other service or retail businesses, shared with customers through a link or a QR code instead of printed pricing.</p>
+    </div>
+    <div class="modal-cta-row" style="justify-content:center;">
+      <a href="digital-price-lists/" class="service-cta-outline">
+        Learn More
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="https://pricelists.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta">
+        Visit Platform
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="work-modal" id="modal-product-requests" aria-hidden="true">
+  <div class="work-modal-backdrop" data-close-modal></div>
+  <div class="work-modal-content" role="dialog" aria-labelledby="modal-product-requests-title">
+    <button class="work-modal-close" data-close-modal aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    <div class="work-modal-head">
+      <span class="section-eyebrow-pill">The Products</span>
+      <h3 id="modal-product-requests-title">Requests by Colart</h3>
+      <p>Requests by Colart is a digital song-request platform built for karaoke bars and entertainment venues. Guests submit a song request from a branded page on their phone, and it lands straight in the venue's WhatsApp.</p>
+    </div>
+    <div class="modal-cta-row" style="justify-content:center;">
+      <a href="requests/" class="service-cta-outline">
+        Learn More
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+      <a href="https://requests.colartdigitalmarketingagency.com/" target="_blank" rel="noopener noreferrer" class="service-cta">
+        Visit Platform
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+      </a>
+    </div>
+  </div>
+</div>
 <!-- ============ LOCATIONS WE SERVE ============ -->
 <section class="location-chips-section fade-in">
   <div class="container">
@@ -356,8 +393,12 @@
     <p class="section-eyebrow center">Works Well With</p>
     <h2 class="section-title center">Pair It With a Colart Service</h2>
     <div class="related-links-row">
-      <a href="../services/website-development/" class="anchor-pill"><i class="fa-solid fa-code"></i><span>Website Development</span></a>
+      <a href="../services/branding/" class="anchor-pill"><i class="fa-solid fa-palette"></i><span>Branding</span></a>
+      <a href="../services/graphic-design/" class="anchor-pill"><i class="fa-solid fa-pencil-ruler"></i><span>Graphic Design</span></a>
       <a href="../services/social-media-management/" class="anchor-pill"><i class="fa-solid fa-share-nodes"></i><span>Social Media Management</span></a>
+      <a href="../services/digital-advertising/" class="anchor-pill"><i class="fa-solid fa-bullhorn"></i><span>Digital Advertising</span></a>
+      <a href="../services/media-production/" class="anchor-pill"><i class="fa-solid fa-video"></i><span>Media Production</span></a>
+      <a href="../services/website-development/" class="anchor-pill"><i class="fa-solid fa-code"></i><span>Website Development</span></a>
     </div>
   </div>
 </section>
@@ -430,7 +471,7 @@
   <a href="mailto:info@colartdigitalmarketingagency.com"><i class="fa-solid fa-envelope"></i> info@colartdigitalmarketingagency.com</a>
   <a href="tel:+96170649423"><i class="fa-solid fa-phone"></i> +961 70 64 94 23</a>
   <a href="tel:+96181042512"><i class="fa-solid fa-phone"></i> +961 81 04 25 12</a>
-  <p><i class="fa-solid fa-location-dot"></i> Lebanon · GCC · Beyond</p>
+  <p class="foot-locations"><i class="fa-solid fa-location-dot"></i> <a href="https://share.google/UKfyDgR8Y3tpIa0xI" target="_blank" rel="noopener noreferrer">Tripoli</a> · <a href="https://share.google/zlSpz5qpc7SzGAofQ" target="_blank" rel="noopener noreferrer">Beirut</a> · <a href="https://share.google/lSWvsUQU6YiaIzXOZ" target="_blank" rel="noopener noreferrer">Jbeil</a> · Batroun · GCC &amp; Beyond</p>
 </div>
   </div>
   <div class="foot-mid">
@@ -503,6 +544,7 @@
   </div>
 </div>
 <script src="../assets/js/main.js"></script>
+<script src="../assets/js/popups.js"></script>
 <script src="../assets/js/chatbot.js"></script>
 </body>
 </html>
