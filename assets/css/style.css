@@ -5067,6 +5067,18 @@ footer {
 @media (max-width: 700px) { .who-grid.products-grid-3 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 480px) { .who-grid.products-grid-3 { grid-template-columns: 1fr; } }
 
+.who-grid.products-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 300px));
+  justify-content: center;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+.who-grid.products-grid-4 .who-card { text-align: center; }
+.who-grid.products-grid-4 .who-card-icon { margin-left: auto; margin-right: auto; }
+.who-grid.products-grid-4 .modal-cta-row { justify-content: center; }
+@media (max-width: 1250px) { .who-grid.products-grid-4 { grid-template-columns: repeat(2, 1fr); max-width: 640px; } }
+@media (max-width: 480px) { .who-grid.products-grid-4 { grid-template-columns: 1fr; max-width: 100%; } }
+
 /* ===========================================
    CLICKABLE SUBSERVICE CARD (external-link variant)
    Used where a "Selected Work" subservice-card
