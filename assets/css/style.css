@@ -5097,3 +5097,86 @@ a.subservice-card {
    and a visible focus ring, whether it's a .who-card or a .subservice-card */
 [data-modal-target] { cursor: pointer; }
 [data-modal-target]:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+
+/* ===========================================
+   HOMEPAGE - DETAILED MOBILE NAV (ACCORDION)
+   Scoped to .mobile-menu-detailed so it only
+   changes the homepage's mobile menu; every
+   other page keeps the original flat .mobile-menu.
+=========================================== */
+.mobile-menu.mobile-menu-detailed {
+  bottom: 0;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, .7);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+.mobile-menu-detailed nav { padding: 20px 20px 40px; gap: 0; }
+
+.mobile-nav-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(100, 40, 120, .14);
+}
+.mobile-nav-link {
+  flex: 1;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--magenta);
+  transition: color .3s;
+}
+.mobile-nav-link:hover { color: var(--purple); }
+
+.mobile-nav-flat {
+  display: block;
+  padding: 14px 0;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--magenta);
+  border-bottom: 1px solid rgba(100, 40, 120, .14);
+  transition: color .3s;
+}
+.mobile-nav-flat:hover { color: var(--purple); }
+
+.mobile-nav-expand {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  color: var(--magenta);
+  font-size: 13px;
+  transition: color .3s;
+}
+.mobile-nav-expand:hover { color: var(--purple); }
+.mobile-nav-expand i { display: inline-block; transition: transform .3s; }
+.mobile-nav-expand[aria-expanded="true"] i { transform: rotate(180deg); }
+
+.mobile-submenu {
+  flex-basis: 100%;
+  max-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: max-height .4s cubic-bezier(.2, .7, .2, 1);
+}
+.mobile-nav-item.open .mobile-submenu { max-height: 700px; padding-bottom: 8px; }
+.mobile-submenu a {
+  padding: 10px 0 10px 20px;
+  margin-left: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--purple);
+  border-left: 2px solid rgba(200, 20, 120, .3);
+  transition: color .25s, border-color .25s;
+}
+.mobile-submenu a:hover { color: var(--magenta); border-color: var(--magenta); }
+
+.mobile-menu-detailed .mobile-cta {
+  margin-top: 18px;
+}
