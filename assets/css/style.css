@@ -1,5 +1,5 @@
 /* ===========================================
-   COLART — DIGITAL MARKETING AGENCY
+   COLART - DIGITAL MARKETING AGENCY
    Main Stylesheet
    We Create. You Grow.
 =========================================== */
@@ -26,7 +26,7 @@
   --line:     rgba(26, 20, 36, .12);
   --muted:    rgba(26, 20, 36, .6);
 
-  /* Typography — Lato only */
+  /* Typography - Lato only */
   --font-display: 'Lato', system-ui, sans-serif;
   --font-body:    'Lato', system-ui, sans-serif;
   --font-mono:    'Lato', system-ui, sans-serif;
@@ -362,7 +362,7 @@ nav.nav-links a.active::after { transform: scaleX(1); }
   min-height: 400px;
 }
 
-/* Floating "99+" badge — single, clean definition */
+/* Floating "99+" badge - single, clean definition */
 .floating-badge {
   position: absolute;
   top: 50%; left: 50%;
@@ -448,7 +448,7 @@ nav.nav-links a.active::after { transform: scaleX(1); }
   50%      { transform: translateY(-14px); }
 }
 
-/* Hero responsive — tablet */
+/* Hero responsive - tablet */
 @media (max-width: 980px) {
   .hero-side {
     min-height: 320px;
@@ -474,7 +474,7 @@ nav.nav-links a.active::after { transform: scaleX(1); }
   }
 }
 
-/* Hero responsive — phone */
+/* Hero responsive - phone */
 @media (max-width: 480px) {
   .hero { padding: 120px 18px 60px; }
   .hero-side { min-height: 260px; }
@@ -590,7 +590,7 @@ footer {
 }
 .foot-col a:hover { color: var(--magenta); transform: translateX(3px); }
 
-/* Get-in-touch icons — fixed width, spacing, brand color */
+/* Get-in-touch icons - fixed width, spacing, brand color */
 .foot-col a i,
 .foot-col p i {
   width: 18px;
@@ -1247,7 +1247,7 @@ footer {
 
 
 /* ===========================================
-   6. SECTION 2 — WELCOME (REDESIGNED)
+   6. SECTION 2 - WELCOME (REDESIGNED)
 =========================================== */
 .welcome-section {
   position: relative;
@@ -1312,7 +1312,7 @@ footer {
 }
 
 /* ===========================================
-   SHARED — SECTION HEAD (eyebrow pill + title + intro)
+   SHARED - SECTION HEAD (eyebrow pill + title + intro)
 =========================================== */
 .section-head {
   max-width: 880px;
@@ -1353,7 +1353,7 @@ footer {
 }
 
 /* ===========================================
-   TRUSTED BY — LOGO WALL (collaborations page)
+   TRUSTED BY - LOGO WALL (collaborations page)
 =========================================== */
 .logo-wall {
   display: grid;
@@ -1392,7 +1392,7 @@ footer {
 }
 
 /* ===========================================
-   7. SECTION 3 — WHO WE HELP (REDESIGNED)
+   7. SECTION 3 - WHO WE HELP (REDESIGNED)
 =========================================== */
 .who-section {
   padding: 110px 36px;
@@ -1503,7 +1503,7 @@ footer {
 .who-card:hover .who-card-more i { transform: translateX(2px); }
 
 /* ===========================================
-   8. SECTION 4 — OUR SERVICES (REDESIGNED)
+   8. SECTION 4 - OUR SERVICES (REDESIGNED)
 =========================================== */
 .services-section {
   padding: 110px 36px;
@@ -1649,7 +1649,7 @@ footer {
 .btn-pill-gradient:hover i { transform: translateX(4px); }
 
 /* ===========================================
-   9. SECTION 5 — OUR WORK (REDESIGNED)
+   9. SECTION 5 - OUR WORK (REDESIGNED)
 =========================================== */
 .our-work-section {
   padding: 110px 36px;
@@ -1747,7 +1747,7 @@ footer {
 .work-img-tag i { color: var(--yellow); }
 
 /* ===========================================
-   10. SECTION 6 — WHY COLART (REDESIGNED)
+   10. SECTION 6 - WHY COLART (REDESIGNED)
 =========================================== */
 .why-section {
   padding: 110px 36px;
@@ -1822,7 +1822,7 @@ footer {
 }
 
 /* ===========================================
-   11. SECTION 7 — HOW WE WORK (PROCESS)
+   11. SECTION 7 - HOW WE WORK (PROCESS)
 =========================================== */
 .how-section {
   padding: 110px 36px;
@@ -1904,7 +1904,7 @@ footer {
 }
 
 /* ===========================================
-   11b. SECTION 8 — FINAL CTA (REDESIGNED — smaller buttons)
+   11b. SECTION 8 - FINAL CTA (REDESIGNED - smaller buttons)
 =========================================== */
 .final-cta-section {
   padding: 100px 36px;
@@ -2010,7 +2010,7 @@ footer {
 }
 
 /* ===========================================
-   14b. SECTION 9 — FAQ (HOMEPAGE)
+   14b. SECTION 9 - FAQ (HOMEPAGE)
 =========================================== */
 .faq-section {
   padding: 110px 36px;
@@ -2136,7 +2136,7 @@ footer {
   margin: 0;
 }
 
-/* Dedicated FAQ page — categorized accordion sections */
+/* Dedicated FAQ page - categorized accordion sections */
 .faq-page-section {
   padding: 90px 36px 110px;
   background: #fff;
@@ -2171,7 +2171,7 @@ footer {
 .faq-page-section .faq-item { background: var(--bg-soft); }
 
 /* ===========================================
-   15. INNER PAGE HERO (subpages — services, etc.)
+   15. INNER PAGE HERO (subpages - services, etc.)
 =========================================== */
 .inner-hero {
   position: relative;
@@ -2185,7 +2185,7 @@ footer {
   text-align: center;
 }
 
-/* Services page hero — custom background photo, with a soft light wash so text stays readable */
+/* Services page hero - custom background photo, with a soft light wash so text stays readable */
 .inner-hero.services-hero-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
@@ -2195,7 +2195,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* Our Work page hero — custom photo, with a soft light wash so text stays readable */
+/* Our Work page hero - custom photo, with a soft light wash so text stays readable */
 .inner-hero.our-work-hero-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
@@ -2205,7 +2205,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* Reviews page hero — custom photo, with a soft light wash so text stays readable */
+/* Reviews page hero - custom photo, with a soft light wash so text stays readable */
 .inner-hero.reviews-hero-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
@@ -2215,7 +2215,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* Contact page hero — custom photo, with a soft light wash so text stays readable */
+/* Contact page hero - custom photo, with a soft light wash so text stays readable */
 .inner-hero.contact-hero-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
@@ -2225,7 +2225,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* Team page hero — custom illustration, with a soft light wash so text stays readable */
+/* Team page hero - custom illustration, with a soft light wash so text stays readable */
 .inner-hero.team-hero-bg {
   background-image:
     linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
@@ -2235,7 +2235,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* Collaborations page hero — custom illustration; extra-strong wash since this
+/* Collaborations page hero - custom illustration; extra-strong wash since this
    image is more saturated/busy than the other hero photos, to keep text readable */
 .inner-hero.collaboration-hero-bg {
   background-image:
@@ -2246,7 +2246,7 @@ footer {
   background-repeat: no-repeat;
 }
 
-/* FAQ page hero — custom illustration; stronger wash since the colorful
+/* FAQ page hero - custom illustration; stronger wash since the colorful
    question-mark shapes sit directly behind the headline text */
 .inner-hero.faq-hero-bg {
   background-image:
@@ -2347,7 +2347,7 @@ footer {
 }
 
 /* ===========================================
-   16. SERVICES PAGE — WHAT WE DO INTRO
+   16. SERVICES PAGE - WHAT WE DO INTRO
 =========================================== */
 .services-intro {
   background: #fff;
@@ -2899,7 +2899,7 @@ footer {
 }
 
 /* ===========================================
-   SECTION 1 — BRAND IDENTITY GRID
+   SECTION 1 - BRAND IDENTITY GRID
 =========================================== */
 .brand-grid {
   display: grid;
@@ -3009,7 +3009,7 @@ footer {
 .brand-card-blur-cta:hover .brand-card-center-content .brand-card-cta { gap: 11px; }
 
 /* ===========================================
-   SECTION 2 — LOGO PREVIEW GRID
+   SECTION 2 - LOGO PREVIEW GRID
 =========================================== */
 .logo-preview-grid {
   display: grid;
@@ -3075,7 +3075,7 @@ footer {
 .btn-view-all:hover i { transform: translateX(4px); }
 
 /* ===========================================
-   SECTIONS 3-6 — PLACEHOLDER GRID (until images arrive)
+   SECTIONS 3-6 - PLACEHOLDER GRID (until images arrive)
 =========================================== */
 .placeholder-grid {
   display: grid;
@@ -3113,7 +3113,7 @@ footer {
 }
 
 /* ===========================================
-   MODALS — BRAND CASE STUDIES & LOGO GALLERY
+   MODALS - BRAND CASE STUDIES & LOGO GALLERY
 =========================================== */
 .work-modal {
   position: fixed;
@@ -3224,7 +3224,7 @@ footer {
   letter-spacing: .04em;
 }
 
-/* Logo modal — grid layout */
+/* Logo modal - grid layout */
 .work-modal-logo-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -3259,13 +3259,13 @@ footer {
 }
 
 /* ===========================================
-   SECTION 3 — SOCIAL MEDIA (preview grid + modal masonry)
+   SECTION 3 - SOCIAL MEDIA (preview grid + modal masonry)
    Preview = 5 uniform squares for clean section view.
-   Modal = masonry layout (CSS columns) — every image keeps its
+   Modal = masonry layout (CSS columns) - every image keeps its
    natural aspect ratio (squares, portraits, story 9:16, landscape).
 =========================================== */
 
-/* ===== PREVIEW GRID — 5 cards, masonry (respects natural aspect ratios) ===== */
+/* ===== PREVIEW GRID - 5 cards, masonry (respects natural aspect ratios) ===== */
 .social-preview-grid {
   column-count: 5;
   column-gap: 16px;
@@ -3305,9 +3305,9 @@ footer {
 }
 .social-preview-card:hover img { transform: scale(1.06); }
 
-/* ===== MODAL — MASONRY (Pinterest-style, natural aspect ratios) =====
+/* ===== MODAL - MASONRY (Pinterest-style, natural aspect ratios) =====
    Uses CSS columns: images flow top-to-bottom in each column.
-   Each image displays at its full natural aspect ratio — no cropping. */
+   Each image displays at its full natural aspect ratio - no cropping. */
 .work-modal-social-grid {
   column-count: 4;
   column-gap: 14px;
@@ -3346,13 +3346,13 @@ footer {
 .modal-social-cell:hover img { transform: scale(1.04); }
 
 /* ===========================================
-   SECTIONS 4 & 5 — CAROUSELS & MENUS
+   SECTIONS 4 & 5 - CAROUSELS & MENUS
 =========================================== */
 
 /* Override the default 1:1 brand-card aspect ratio so the preview tiles
-   match the natural shape of their cover images — no cropping needed. */
+   match the natural shape of their cover images - no cropping needed. */
 
-/* Section 4 — Carousels: 4:5 portrait (Instagram post format) */
+/* Section 4 - Carousels: 4:5 portrait (Instagram post format) */
 #carousels .brand-grid {
   grid-template-columns: repeat(4, 1fr);
 }
@@ -3363,7 +3363,7 @@ footer {
 #carousels .brand-card { aspect-ratio: 4 / 5; }
 #carousels .brand-card-img img { object-position: center center; }
 
-/* Section 5 — Menus: 9:16 story format. Cards naturally taller. */
+/* Section 5 - Menus: 9:16 story format. Cards naturally taller. */
 #menus .brand-grid {
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
@@ -3436,7 +3436,7 @@ footer {
   border-radius: 999px;
 }
 
-/* Carousel modal gallery — 4:5 portrait slides */
+/* Carousel modal gallery - 4:5 portrait slides */
 .work-modal-gallery-carousel {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3468,7 +3468,7 @@ footer {
   letter-spacing: .04em;
 }
 
-/* Menu modal gallery — 9:16 story-format slides */
+/* Menu modal gallery - 9:16 story-format slides */
 .work-modal-gallery-menu {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -3501,7 +3501,7 @@ footer {
   letter-spacing: .04em;
 }
 
-/* Section 6 — Website Previews: wide landscape box, full screenshot always visible (no cropping) */
+/* Section 6 - Website Previews: wide landscape box, full screenshot always visible (no cropping) */
 #websites .brand-card { aspect-ratio: 16 / 10; }
 #websites .brand-card-img {
   background: var(--bg-soft);
@@ -3516,7 +3516,7 @@ footer {
   object-position: center center;
 }
 
-/* Website preview modal gallery — full screenshot always visible (no cropping) */
+/* Website preview modal gallery - full screenshot always visible (no cropping) */
 .work-modal-gallery-website {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -3704,7 +3704,7 @@ footer {
   margin-bottom: 0;
 }
 
-/* "Read Full Review" trigger — reuses .service-link's look, reset as a <button> */
+/* "Read Full Review" trigger - reuses .service-link's look, reset as a <button> */
 .review-readmore {
   border: none;
   cursor: pointer;
@@ -3719,7 +3719,7 @@ footer {
 }
 
 /* ===========================================
-   CONTACT PAGE — INTRO SPLIT
+   CONTACT PAGE - INTRO SPLIT
 =========================================== */
 .contact-intro-grid {
   display: grid;
@@ -4508,7 +4508,7 @@ footer {
   color: #fff;
 }
 
-/* "Read Full Bio" trigger — reuses .service-link's look, reset as a <button> */
+/* "Read Full Bio" trigger - reuses .service-link's look, reset as a <button> */
 .team-card-readmore {
   border: none;
   cursor: pointer;
@@ -4524,7 +4524,7 @@ footer {
 .team-modal-bio p:last-child { margin-bottom: 0; }
 .team-modal-bio strong { color: var(--purple); }
 
-/* "Join Our Team" CTA card — 8th grid item, styled as an invitation rather than a person */
+/* "Join Our Team" CTA card - 8th grid item, styled as an invitation rather than a person */
 .team-card-join {
   background: linear-gradient(150deg, rgba(100, 40, 120, .05) 0%, rgba(200, 20, 120, .05) 100%);
   border: 1.5px dashed rgba(100, 40, 120, .3);
@@ -4640,7 +4640,7 @@ footer {
 }
 .collab-card-readmore { border: none; cursor: pointer; margin-top: auto; }
 
-/* "Could Colart Add Value to Your Business?" CTA card — styled as an invitation, like Join Our Team */
+/* "Could Colart Add Value to Your Business?" CTA card - styled as an invitation, like Join Our Team */
 .collab-card-cta {
   background: linear-gradient(150deg, rgba(100, 40, 120, .05) 0%, rgba(200, 20, 120, .05) 100%);
   border: 1.5px dashed rgba(100, 40, 120, .3);
@@ -4710,7 +4710,7 @@ footer {
   margin-bottom: 12px;
 }
 
-/* Valuable Clients grid — tighten the gap to the section above it */
+/* Valuable Clients grid - tighten the gap to the section above it */
 .collab-clients-section { padding-top: 10px; }
 
 /* Placeholder social row inside "coming soon" client modals */
@@ -4740,7 +4740,7 @@ footer {
 }
 
 /* ===========================================
-   PHOTO LIGHTBOX — full-screen zoom + swipe
+   PHOTO LIGHTBOX - full-screen zoom + swipe
    Used across every Our Work popup gallery
 =========================================== */
 .lightbox {
@@ -4885,7 +4885,7 @@ footer {
 }
 
 /* ===========================================
-   SHARED — BREADCRUMBS
+   SHARED - BREADCRUMBS
    Used across dedicated service / location / product pages
 =========================================== */
 .breadcrumbs { padding: 18px 36px 0; background: var(--bg); }
@@ -4907,7 +4907,7 @@ footer {
 @media (max-width: 768px) { .breadcrumbs { padding: 14px 24px 0; } }
 
 /* ===========================================
-   SHARED — LOCATION CHIPS
+   SHARED - LOCATION CHIPS
    Used across dedicated service / location / product pages
 =========================================== */
 .location-chips-section { padding: 60px 36px; background: var(--bg-soft); }
@@ -4929,7 +4929,7 @@ footer {
 @media (max-width: 768px) { .location-chips-section { padding: 50px 24px; } }
 
 /* ===========================================
-   SHARED — ICON VISUAL PANEL
+   SHARED - ICON VISUAL PANEL
    Drop-in replacement for .service-detail-visual img
    when a page has no dedicated photo yet
 =========================================== */
@@ -4945,10 +4945,155 @@ footer {
 .service-detail-visual-icon i { font-size: 96px; color: rgba(255, 255, 255, .92); }
 
 /* ===========================================
-   SHARED — RELATED LINKS ROW
+   SHARED - RELATED LINKS ROW
    Plain-language cross-links between services/locations/products
 =========================================== */
 .related-links-section { padding: 70px 36px; background: #fff; }
 .related-links-section .container { max-width: 1100px; margin: 0 auto; text-align: center; }
 .related-links-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 28px; }
 @media (max-width: 768px) { .related-links-section { padding: 50px 24px; } }
+
+/* ===========================================
+   FOOTER - CLICKABLE CITY MAP LINKS
+   Scoped override so <a> tags inside the footer
+   locations line sit inline instead of stacking
+   like the regular block-level footer links.
+=========================================== */
+.foot-locations a {
+  display: inline;
+  padding: 0;
+  color: var(--muted);
+  text-decoration: underline;
+  text-decoration-color: rgba(100, 40, 120, .35);
+  text-underline-offset: 2px;
+  transition: color .3s;
+}
+.foot-locations a:hover { color: var(--magenta); transform: none; }
+
+/* ===========================================
+   GRAPHIC DESIGN HERO - SPLIT LAYOUT
+   Two-column hero (copy left, showcase image
+   right). Scoped to this modifier so it never
+   touches the shared centered .inner-hero used
+   on every other service/location/combo page.
+=========================================== */
+.inner-hero.graphic-design-hero-split {
+  text-align: left;
+  padding: 170px 36px 90px;
+}
+.graphic-design-hero-grid {
+  position: relative;
+  z-index: 2;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.graphic-design-hero-grid .inner-hero-content {
+  margin: 0;
+  max-width: 560px;
+  text-align: left;
+}
+.graphic-design-hero-grid .inner-hero-content .anchor-pills { justify-content: flex-start; }
+.graphic-design-hero-image {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(26, 20, 36, .18);
+  aspect-ratio: 1 / 1;
+}
+.graphic-design-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 900px) {
+  .graphic-design-hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  .graphic-design-hero-grid .inner-hero-content { max-width: 100%; text-align: center; margin: 0 auto; }
+  .graphic-design-hero-grid .inner-hero-content .anchor-pills { justify-content: center; }
+  .graphic-design-hero-image { max-width: 420px; margin: 0 auto; }
+}
+
+/* ===========================================
+   PRODUCTS HERO - PHOTO BACKGROUND + DARK OVERLAY
+   Mirrors the homepage's photo-hero treatment
+   (dark magenta/purple wash, white text), scoped
+   as its own modifier so the shared light
+   .inner-hero gradient is untouched elsewhere.
+=========================================== */
+.inner-hero.products-hero-bg {
+  background-image:
+    linear-gradient(100deg,
+      rgba(100, 40, 120, .90) 0%,
+      rgba(100, 40, 120, .76) 35%,
+      rgba(80, 40, 120, .55) 65%,
+      rgba(200, 20, 120, .45) 100%),
+    url('../images/products-hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.inner-hero.products-hero-bg .eyebrow {
+  background: rgba(255, 255, 255, .16);
+  color: #fff;
+}
+.inner-hero.products-hero-bg h1 { color: #fff; }
+.inner-hero.products-hero-bg h1 .magenta { color: var(--yellow); }
+.inner-hero.products-hero-bg p { color: rgba(255, 255, 255, .88); }
+.inner-hero.products-hero-bg .anchor-pill {
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+  border-color: rgba(255, 255, 255, .3);
+}
+
+/* ===========================================
+   PRODUCTS PAGE - CENTERED 3-CARD ROW
+   Scoped modifier so the shared 5-column
+   .who-grid stays untouched on every other page.
+=========================================== */
+.who-grid.products-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 320px));
+  justify-content: center;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.who-grid.products-grid-3 .who-card { text-align: center; }
+.who-grid.products-grid-3 .who-card-icon { margin-left: auto; margin-right: auto; }
+.who-grid.products-grid-3 .modal-cta-row { justify-content: center; }
+@media (max-width: 1100px) { .who-grid.products-grid-3 { grid-template-columns: repeat(3, 1fr); max-width: 100%; } }
+@media (max-width: 700px) { .who-grid.products-grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .who-grid.products-grid-3 { grid-template-columns: 1fr; } }
+
+/* ===========================================
+   CLICKABLE SUBSERVICE CARD (external-link variant)
+   Used where a "Selected Work" subservice-card
+   links out to a real external site, e.g. the
+   Branding and Website Development pages.
+=========================================== */
+a.subservice-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.subservice-card-link-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--purple);
+  margin-top: 12px;
+  transition: gap .25s;
+}
+.subservice-card-link-label i { font-size: 10px; transition: transform .3s; }
+.subservice-card:hover .subservice-card-link-label { gap: 11px; }
+.subservice-card:hover .subservice-card-link-label i { transform: translateX(2px); }
+
+/* Any element wired up by popups.js to open a modal gets a pointer cursor
+   and a visible focus ring, whether it's a .who-card or a .subservice-card */
+[data-modal-target] { cursor: pointer; }
+[data-modal-target]:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
