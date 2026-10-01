@@ -49,4 +49,16 @@
     document.body.style.overflow = '';
   }
 
+  // ===== Mobile nav accordion (Home, Products, Services, Our Work,
+  // Team, Collaboration sub-section lists) =====
+  document.querySelectorAll('#mobileMenu .mobile-nav-expand').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var item = btn.closest('.mobile-nav-item');
+      if (!item) return;
+      var isOpen = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+
 })();
