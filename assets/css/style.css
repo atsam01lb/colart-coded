@@ -5212,48 +5212,71 @@ a.subservice-card {
 
 /* ===========================================
    PRODUCT PAGES (Menus / Price Lists / Requests)
-   HERO - SPLIT LAYOUT
-   Same two-column pattern as the Graphic Design
-   hero, reused here as a generic modifier since
-   all three product pages need it. Widescreen
-   aspect ratio to match the product mockup photos.
+   HERO - IMAGE AS FULL-BLEED BACKGROUND
+   Overrides the earlier split layout: the same
+   <img> now fills the whole hero section behind
+   the text, with a soft wash on the text side.
 =========================================== */
 .inner-hero.product-hero-split {
   text-align: left;
-  padding: 170px 36px 90px;
+  padding: 190px 36px 120px;
+  min-height: 620px;
 }
+.inner-hero.product-hero-split .inner-hero-dot { display: none; }
 .product-hero-grid {
-  position: relative;
-  z-index: 2;
+  position: static;
+  z-index: auto;
+  display: block;
   max-width: 1280px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 50px;
-  align-items: center;
 }
 .product-hero-grid .inner-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
   margin: 0;
-  max-width: 540px;
   text-align: left;
 }
-.product-hero-grid .inner-hero-content .anchor-pills { justify-content: flex-start; }
 .product-hero-image {
-  position: relative;
-  border-radius: 24px;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: 0;
+  box-shadow: none;
+  aspect-ratio: auto;
   overflow: hidden;
-  box-shadow: 0 30px 60px rgba(26, 20, 36, .18);
-  aspect-ratio: 16 / 9;
 }
 .product-hero-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: right center;
   display: block;
 }
+.product-hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(250, 248, 251, .96) 0%,
+    rgba(250, 248, 251, .90) 38%,
+    rgba(250, 248, 251, .30) 58%,
+    rgba(250, 248, 251, 0) 78%);
+}
 @media (max-width: 900px) {
-  .product-hero-grid { grid-template-columns: 1fr; gap: 36px; }
-  .product-hero-grid .inner-hero-content { max-width: 100%; text-align: center; margin: 0 auto; }
-  .product-hero-grid .inner-hero-content .anchor-pills { justify-content: center; }
-  .product-hero-image { aspect-ratio: 16 / 10; }
+  .inner-hero.product-hero-split {
+    text-align: center;
+    padding: 150px 24px 80px;
+    min-height: 0;
+  }
+  .product-hero-grid .inner-hero-content {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .product-hero-image { aspect-ratio: auto; }
+  .product-hero-image img { object-position: 72% center; }
+  .product-hero-image::after {
+    background: linear-gradient(rgba(250, 248, 251, .90), rgba(250, 248, 251, .80));
+  }
 }
