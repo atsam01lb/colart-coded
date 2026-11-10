@@ -584,7 +584,7 @@ footer {
   max-width: 360px;
 }
 
-.foot-col h5 {
+.foot-col h3, .foot-col h5 {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: .05em;
@@ -621,7 +621,7 @@ footer {
   padding-top: 30px;
   border-top: 1px solid rgba(100, 40, 120, .1);
 }
-.follow h5 {
+.follow h3, .follow h5 {
   font-size: 14px;
   font-weight: 700;
   color: var(--ink);
