@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-70DCV8Q4EX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -33,10 +31,10 @@
   <link rel="icon" type="image/png" href="../../assets/images/colart-favicon.png" />
   <link rel="apple-touch-icon" href="../../assets/images/colart-favicon.png" />
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="preload" href="../../assets/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="../../assets/fonts/lato-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" href="../../assets/images/services-hero-bg.jpg" fetchpriority="high" />
+  <link rel="stylesheet" href="../../assets/css/icons.css" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="../../assets/css/style.css">
   <!-- Structured data (AEO) -->
@@ -754,8 +752,17 @@
     </button>
   </div>
 </div>
-<script src="../../assets/js/main.js"></script>
-<script src="../../assets/js/popups.js"></script>
-<script src="../../assets/js/chatbot.js"></script>
+<script src="../../assets/js/main.js" defer></script>
+<script src="../../assets/js/popups.js" defer></script>
+<script data-p="../../">
+/* Load analytics + chatbot after the page is ready (keeps them off the critical path) */
+(function(){var done=false,P=document.currentScript.getAttribute('data-p');
+function go(){if(done)return;done=true;
+['scroll','mousemove','touchstart','keydown','pointerdown'].forEach(function(e){removeEventListener(e,go)});
+var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=G-70DCV8Q4EX';document.head.appendChild(g);
+var c=document.createElement('script');c.src=P+'assets/js/chatbot.js';document.body.appendChild(c);}
+['scroll','mousemove','touchstart','keydown','pointerdown'].forEach(function(e){addEventListener(e,go,{once:true,passive:true})});
+addEventListener('load',function(){setTimeout(go,4000)});})();
+</script>
 </body>
 </html>
