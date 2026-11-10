@@ -222,10 +222,13 @@ nav.nav-links a.active::after { transform: scaleX(1); }
   position: absolute;
   inset: 0;
   z-index: -2;
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url('../images/hero-bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+@media (max-width: 768px) {
+  .hero-bg { background-image: url('../images/hero-bg-mobile.webp'); }
 }
 .hero-overlay {
   position: absolute;
