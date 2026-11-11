@@ -1196,25 +1196,25 @@ footer {
 /* ===========================================
    15. ANIMATIONS
 =========================================== */
+/* Hero entrance: motion only, no fade-from-invisible, so the first screen
+   is painted immediately (fast LCP). */
 .reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: reveal 1s cubic-bezier(.2, .7, .2, 1) forwards;
+  transform: translateY(18px);
+  animation: reveal .7s cubic-bezier(.2, .7, .2, 1) forwards;
 }
-.reveal.d1 { animation-delay: .15s; }
-.reveal.d2 { animation-delay: .30s; }
-.reveal.d3 { animation-delay: .45s; }
-.reveal.d4 { animation-delay: .60s; }
-.reveal.d5 { animation-delay: .85s; }
-@keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+.reveal.d1 { animation-delay: 0s; }
+.reveal.d2 { animation-delay: .05s; }
+.reveal.d3 { animation-delay: .1s; }
+.reveal.d4 { animation-delay: .15s; }
+.reveal.d5 { animation-delay: .2s; }
+@keyframes reveal { to { transform: translateY(0); } }
 
 .reveal-scale {
-  opacity: 0;
-  transform: scale(.85);
+  transform: scale(.92);
   animation: revealScale 1.2s cubic-bezier(.2, .7, .2, 1) forwards;
 }
-.reveal-scale.d5 { animation-delay: .85s; }
-@keyframes revealScale { to { opacity: 1; transform: scale(1); } }
+.reveal-scale.d5 { animation-delay: .2s; }
+@keyframes revealScale { to { transform: scale(1); } }
 
 /* Scroll-triggered (added by JS) */
 .fade-in {
