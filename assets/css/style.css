@@ -5037,27 +5037,11 @@ footer {
 =========================================== */
 .inner-hero.products-hero-bg {
   background-image:
-    linear-gradient(100deg,
-      rgba(100, 40, 120, .90) 0%,
-      rgba(100, 40, 120, .76) 35%,
-      rgba(80, 40, 120, .55) 65%,
-      rgba(200, 20, 120, .45) 100%),
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
     url('../images/products-hero.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-.inner-hero.products-hero-bg .eyebrow {
-  background: rgba(255, 255, 255, .16);
-  color: #fff;
-}
-.inner-hero.products-hero-bg h1 { color: #fff; }
-.inner-hero.products-hero-bg h1 .magenta { color: var(--yellow); }
-.inner-hero.products-hero-bg p { color: rgba(255, 255, 255, .88); }
-.inner-hero.products-hero-bg .anchor-pill {
-  background: rgba(255, 255, 255, .1);
-  color: #fff;
-  border-color: rgba(255, 255, 255, .3);
 }
 
 /* ===========================================
@@ -5297,27 +5281,24 @@ a.subservice-card {
 =========================================== */
 .inner-hero.shop-hero-bg {
   background:
-    linear-gradient(100deg, rgba(74, 29, 89, .92) 0%, rgba(100, 40, 120, .80) 40%, rgba(100, 40, 120, .55) 70%, rgba(200, 20, 120, .50) 100%),
+    linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
     url('../images/shop-hero-bg.webp') center / cover no-repeat;
 }
 @media (max-width: 768px) {
   .inner-hero.shop-hero-bg {
     background:
-      linear-gradient(180deg, rgba(74, 29, 89, .90) 0%, rgba(100, 40, 120, .80) 60%, rgba(200, 20, 120, .60) 100%),
+      linear-gradient(rgba(255, 255, 255, .88), rgba(255, 255, 255, .88)),
       url('../images/shop-hero-bg-mobile.webp') center / cover no-repeat;
   }
 }
-.inner-hero.shop-hero-bg .eyebrow { background: rgba(255, 255, 255, .16); color: #fff; }
-.inner-hero.shop-hero-bg h1 { color: #fff; }
-.inner-hero.shop-hero-bg h1 .magenta { color: var(--yellow); }
-.inner-hero.shop-hero-bg p { color: rgba(255, 255, 255, .9); }
 .shop-hero-badge {
   display: inline-flex; align-items: center; gap: 10px;
-  margin-top: 26px; padding: 10px 20px; border-radius: 999px;
-  background: rgba(255, 255, 255, .14); border: 1px solid rgba(255, 255, 255, .3);
-  color: #fff; font-size: 14px; font-weight: 700; letter-spacing: .02em;
+  margin-top: 6px; padding: 10px 20px; border-radius: 999px;
+  background: #fff; border: 1.5px solid var(--line);
+  color: var(--ink); font-size: 14px; font-weight: 700; letter-spacing: .02em;
+  box-shadow: 0 4px 14px rgba(26, 20, 36, .05);
 }
-.shop-hero-badge i { color: var(--yellow); }
+.shop-hero-badge i { color: #0b6b37; }
 
 .shop-section { padding: 90px 36px; }
 .shop-section .container, .shop-process-section .container { max-width: 1240px; margin: 0 auto; }
