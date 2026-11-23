@@ -33,6 +33,8 @@
   <!-- Fonts -->
   <link rel="preload" href="assets/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/lato-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/lato-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/lato-latin-300-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/css/icons.css" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="assets/css/icons.css" /></noscript>
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -247,12 +249,26 @@
     <span class="hv2-shape hv2-s5"></span>
     <span class="hv2-shape hv2-s6"></span>
   </div>
-  <div class="hero-inner">
+  <svg class="hv3-wave" viewBox="0 0 1600 400" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="hv3WaveGrad" x1="0" x2="1" y1="0" y2="0">
+        <stop offset="0" stop-color="#a05adc" stop-opacity="0"/>
+        <stop offset=".25" stop-color="#e64497"/>
+        <stop offset=".55" stop-color="#ff8a4c"/>
+        <stop offset=".8" stop-color="#c27ae8"/>
+        <stop offset="1" stop-color="#a05adc" stop-opacity="0"/>
+      </linearGradient>
+    </defs>
+    <path class="hv3-wave-glow" d="M-20 300 C 260 230, 420 330, 700 250 S 1180 90, 1620 180" />
+    <path class="hv3-wave-line" d="M-20 300 C 260 230, 420 330, 700 250 S 1180 90, 1620 180" />
+    <path class="hv3-wave-line hv3-wave-2" d="M-20 330 C 300 270, 460 360, 760 280 S 1220 130, 1620 220" />
+  </svg>
+  <div class="hero-inner hv3-inner">
     <div class="hero-text">
       <div class="hero-eyebrow reveal d1">Digital Marketing Agency · Lebanon, GCC &amp; Beyond</div>
-      <h1 class="hero-title reveal d2">
-        We <span class="accent-create">create.<svg class="hv2-squiggle" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 4, 120 6, 170 12 S 260 20, 296 6" /></svg></span><br>
-        You <span class="accent-grow">grow.</span>
+      <h1 class="hero-title hv3-title">
+        <span class="hv3-line"><span class="hv3-word">We</span> <span class="hv3-word hv3-create">create.</span><span class="hv3-rocket" aria-hidden="true"><span class="hv3-trail"></span><i class="fa-solid fa-rocket"></i></span></span>
+        <span class="hv3-line"><span class="hv3-word">You</span> <span class="hv3-word hv3-grow">grow.</span></span>
       </h1>
       <p class="hero-sub reveal d3">
         Colart is a full-service digital marketing agency based in Tripoli, Lebanon,
@@ -261,35 +277,45 @@
         content that move markets, from Lebanon to the Gulf and beyond.
       </p>
       <div class="hero-buttons reveal d4">
-        <a href="contact/" class="btn-primary">
+        <a href="contact/" class="btn-primary hv3-btn-main">
           Start a project <span class="arrow">→</span>
         </a>
-        <a href="services/" class="btn-ghost">Explore services</a>
+        <a href="services/" class="btn-ghost hv3-btn-ghost">Explore services</a>
       </div>
-      <ul class="hv2-certs reveal d5">
-        <li><i class="fa-brands fa-google hv2-g" aria-hidden="true"></i><span>Google<strong>Certified</strong></span></li>
-        <li><i class="fa-brands fa-meta hv2-m" aria-hidden="true"></i><span>Meta<strong>Certified</strong></span></li>
+      <ul class="hv3-certs reveal d5">
+        <li><i class="fa-brands fa-google hv2-g" aria-hidden="true"></i><span>Google<small>Partner</small></span></li>
+        <li><i class="fa-brands fa-meta hv2-m" aria-hidden="true"></i><span>Meta<small>Certified</small></span></li>
+        <li><i class="fa-brands fa-tiktok hv3-tk" aria-hidden="true"></i><span>TikTok<small>Creators</small></span></li>
+        <li><i class="fa-solid fa-graduation-cap hv3-edu" aria-hidden="true"></i><span>TikTok<small>Education</small></span></li>
       </ul>
     </div>
-    <div class="hv2-visual">
-      <span class="hv2-ring" aria-hidden="true"></span>
-      <div class="hv2-card">
-        <img src="assets/images/hero-strategy.webp" srcset="assets/images/hero-strategy-mobile.webp 800w, assets/images/hero-strategy.webp 1600w" sizes="(max-width: 980px) 92vw, 48vw" alt="Colart team presenting a marketing strategy brainstorm on a whiteboard" width="1600" height="900" fetchpriority="high" decoding="async" />
+    <div class="hv2-visual hv3-visual">
+      <div class="hv3-frame">
+        <div class="hv3-photo">
+          <img src="assets/images/hero-strategy.webp" srcset="assets/images/hero-strategy-mobile.webp 800w, assets/images/hero-strategy.webp 1600w" sizes="(max-width: 980px) 94vw, 58vw" alt="Colart team presenting a marketing strategy brainstorm on a whiteboard" width="1600" height="900" fetchpriority="high" decoding="async" />
+        </div>
       </div>
-      <span class="hv2-icon hv2-ig" data-depth="18" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
-      <span class="hv2-icon hv2-fb" data-depth="12" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></span>
-      <span class="hv2-icon hv2-in" data-depth="22" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
-      <span class="hv2-icon hv2-tt" data-depth="10" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
-      <span class="hv2-icon hv2-chart" data-depth="14" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></span>
-      <span class="hv2-icon hv2-mega" data-depth="20" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
-      <div class="floating-badge hv2-badge" data-depth="8">
-        <div class="badge-decorative" aria-hidden="true">★</div>
-        <div class="badge-label">Trusted by</div>
-        <div class="badge-num">99+</div>
-        <p class="badge-text">
-          <strong>Businesses served</strong>
-          across Lebanon, GCC<br>&amp; beyond
-        </p>
+      <span class="hv3-ic hv3-ig" data-depth="16" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+      <span class="hv3-ic hv3-fb" data-depth="10" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></span>
+      <span class="hv3-ic hv3-in" data-depth="20" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+      <span class="hv3-ic hv3-yt" data-depth="14" aria-hidden="true"><i class="fa-brands fa-youtube"></i></span>
+      <span class="hv3-ic hv3-sc" data-depth="18" aria-hidden="true"><i class="fa-brands fa-snapchat"></i></span>
+      <span class="hv3-ic hv3-tt" data-depth="12" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
+      <span class="hv3-ic hv3-x" data-depth="8" aria-hidden="true"><i class="fa-brands fa-x-twitter"></i></span>
+      <span class="hv3-spark hv3-sp1" aria-hidden="true"></span>
+      <span class="hv3-spark hv3-sp2" aria-hidden="true"></span>
+      <span class="hv3-spark hv3-sp3" aria-hidden="true"></span>
+      <div class="hv3-stat" data-depth="6">
+        <svg class="hv3-chart" viewBox="0 0 150 62" aria-hidden="true">
+          <path class="hv3-chart-line" d="M4 50 L30 40 L48 46 L76 22" />
+          <path class="hv3-chart-arrow" d="M66 20 L77 21 L74 32" />
+          <rect class="hv3-bar" x="86" y="38" width="11" height="22" rx="2" />
+          <rect class="hv3-bar" x="102" y="28" width="11" height="32" rx="2" />
+          <rect class="hv3-bar" x="118" y="16" width="11" height="44" rx="2" />
+          <rect class="hv3-bar" x="134" y="4" width="11" height="56" rx="2" />
+        </svg>
+        <p class="hv3-stat-num"><span data-count="99">99</span>+</p>
+        <p class="hv3-stat-label">Businesses served</p>
       </div>
     </div>
   </div>
