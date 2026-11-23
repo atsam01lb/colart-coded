@@ -33,8 +33,6 @@
   <!-- Fonts -->
   <link rel="preload" href="assets/fonts/lato-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/lato-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" as="image" href="assets/images/hero-bg-mobile.webp" media="(max-width: 768px)" fetchpriority="high" />
-  <link rel="preload" as="image" href="assets/images/hero-bg.webp" media="(min-width: 769px)" fetchpriority="high" />
   <link rel="stylesheet" href="assets/css/icons.css" media="print" onload="this.media='all'" /><noscript><link rel="stylesheet" href="assets/css/icons.css" /></noscript>
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css" />
@@ -234,14 +232,18 @@
 </div>
 <main id="main">
 <!-- ============ HERO ============ -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
+<section class="hero hero-v2" id="home">
+  <div class="hv2-bg" aria-hidden="true">
+    <span class="hv2-blob hv2-blob-a"></span>
+    <span class="hv2-blob hv2-blob-b"></span>
+    <span class="hv2-blob hv2-blob-c"></span>
+    <span class="hv2-dots"></span>
+  </div>
   <div class="hero-inner">
     <div class="hero-text">
       <div class="hero-eyebrow reveal d1">Digital Marketing Agency · Lebanon, GCC &amp; Beyond</div>
       <h1 class="hero-title reveal d2">
-        We <span class="accent-create">create.</span><br>
+        We <span class="accent-create">create.<svg class="hv2-squiggle" viewBox="0 0 300 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 4, 120 6, 170 12 S 260 20, 296 6" /></svg></span><br>
         You <span class="accent-grow">grow.</span>
       </h1>
       <p class="hero-sub reveal d3">
@@ -256,13 +258,24 @@
         </a>
         <a href="services/" class="btn-ghost">Explore services</a>
       </div>
+      <ul class="hv2-certs reveal d5">
+        <li><i class="fa-brands fa-google hv2-g" aria-hidden="true"></i><span>Google<strong>Certified</strong></span></li>
+        <li><i class="fa-brands fa-meta hv2-m" aria-hidden="true"></i><span>Meta<strong>Certified</strong></span></li>
+      </ul>
     </div>
-    <div class="hero-side">
-      <span class="floating-dot dot-1"></span>
-      <span class="floating-dot dot-2"></span>
-      <span class="floating-dot dot-3"></span>
-      <div class="floating-badge reveal-scale d5">
-        <div class="badge-decorative">★</div>
+    <div class="hv2-visual">
+      <span class="hv2-ring" aria-hidden="true"></span>
+      <div class="hv2-card">
+        <img src="assets/images/hero-bg.webp" srcset="assets/images/hero-bg-mobile.webp 800w, assets/images/hero-bg.webp 1920w" sizes="(max-width: 980px) 92vw, 48vw" alt="Colart team planning a social media campaign" width="1920" height="1080" fetchpriority="high" decoding="async" />
+      </div>
+      <span class="hv2-icon hv2-ig" data-depth="18" aria-hidden="true"><i class="fa-brands fa-instagram"></i></span>
+      <span class="hv2-icon hv2-fb" data-depth="12" aria-hidden="true"><i class="fa-brands fa-facebook-f"></i></span>
+      <span class="hv2-icon hv2-in" data-depth="22" aria-hidden="true"><i class="fa-brands fa-linkedin-in"></i></span>
+      <span class="hv2-icon hv2-tt" data-depth="10" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
+      <span class="hv2-icon hv2-chart" data-depth="14" aria-hidden="true"><i class="fa-solid fa-chart-column"></i></span>
+      <span class="hv2-icon hv2-mega" data-depth="20" aria-hidden="true"><i class="fa-solid fa-bullhorn"></i></span>
+      <div class="floating-badge hv2-badge" data-depth="8">
+        <div class="badge-decorative" aria-hidden="true">★</div>
         <div class="badge-label">Trusted by</div>
         <div class="badge-num">99+</div>
         <p class="badge-text">
@@ -986,6 +999,13 @@
 var io=new IntersectionObserver(function(en){en.forEach(function(e){if(!e.isIntersecting)return;io.unobserve(e.target);var el=e.target,end=parseFloat(el.getAttribute('data-count')),d=+(el.getAttribute('data-decimals')||0),t0=null;
 function step(t){t0=t0||t;var k=Math.min((t-t0)/1400,1),v=end*(1-Math.pow(1-k,3));el.textContent=v.toFixed(d);if(k<1)requestAnimationFrame(step)}requestAnimationFrame(step)})},{threshold:.6});
 els.forEach(function(el){io.observe(el)})})();
+</script>
+<script>
+/* Hero: gentle pointer parallax on the floating icons (desktop only) */
+(function(){var v=document.querySelector('.hv2-visual');if(!v||!matchMedia('(hover:hover) and (min-width:981px)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var els=v.querySelectorAll('[data-depth]'),raf=0,x=0,y=0;
+v.closest('.hero').addEventListener('pointermove',function(e){var r=v.getBoundingClientRect();x=(e.clientX-r.left)/r.width-.5;y=(e.clientY-r.top)/r.height-.5;
+if(!raf)raf=requestAnimationFrame(function(){raf=0;els.forEach(function(el){var d=+el.getAttribute('data-depth');el.style.translate=(-x*d)+'px '+(-y*d)+'px'})})},{passive:true});})();
 </script>
 <script src="assets/js/main.js" defer></script>
 <script data-p="">
