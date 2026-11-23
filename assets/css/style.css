@@ -5297,9 +5297,15 @@ a.subservice-card {
 =========================================== */
 .inner-hero.shop-hero-bg {
   background:
-    radial-gradient(circle at 85% 20%, rgba(220, 220, 60, .18) 0%, transparent 35%),
-    radial-gradient(circle at 10% 90%, rgba(80, 160, 180, .25) 0%, transparent 40%),
-    linear-gradient(115deg, var(--purple-dk) 0%, var(--purple) 45%, var(--magenta) 100%);
+    linear-gradient(100deg, rgba(74, 29, 89, .92) 0%, rgba(100, 40, 120, .80) 40%, rgba(100, 40, 120, .55) 70%, rgba(200, 20, 120, .50) 100%),
+    url('../images/shop-hero-bg.webp') center / cover no-repeat;
+}
+@media (max-width: 768px) {
+  .inner-hero.shop-hero-bg {
+    background:
+      linear-gradient(180deg, rgba(74, 29, 89, .90) 0%, rgba(100, 40, 120, .80) 60%, rgba(200, 20, 120, .60) 100%),
+      url('../images/shop-hero-bg-mobile.webp') center / cover no-repeat;
+  }
 }
 .inner-hero.shop-hero-bg .eyebrow { background: rgba(255, 255, 255, .16); color: #fff; }
 .inner-hero.shop-hero-bg h1 { color: #fff; }
